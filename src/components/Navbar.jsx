@@ -12,11 +12,9 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
-        // Show after scrolling 100px
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -37,16 +35,16 @@ const Navbar = () => {
         <img src={newLogo} alt="logoimg" className="h-15 w-auto" />
       </div>
 
-      <div className="flex gap-10">
-        <ul className="hidden lg:flex space-x-10 text-white font-medium text-[16px]">
+      <div className="hidden lg:flex gap-10">
+        <ul className="flex space-x-10 text-white font-medium text-[16px]">
           <li className="cursor-pointer hover:underline">Home</li>
           <li className="cursor-pointer hover:underline">Features</li>
           <li className="cursor-pointer hover:underline">Products</li>
           <li className="cursor-pointer hover:underline">F&Q</li>
           <li className="cursor-pointer hover:underline">Contact</li>
         </ul>
-  
-        <div className="hidden lg:flex space-x-6 text-white text-lg">
+
+        <div className="flex space-x-6 text-white text-lg">
           <FaUser className="cursor-pointer" />
           <FaShoppingBag className="cursor-pointer" />
           <FaSearch className="cursor-pointer" />
@@ -54,22 +52,25 @@ const Navbar = () => {
       </div>
 
       <div
-        className="lg:hidden text-white text-xl cursor-pointer"
+        className="lg:hidden text-white text-3xl cursor-pointer z-50"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
       {isMobileMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-[#FBA6DE] text-white flex flex-col items-start px-6 py-4 gap-0 lg:hidden z-10 shadow-md">
-          <ul className="flex flex-col gap-4 font-medium w-full">
-            <li className="cursor-pointer hover:underline">Home</li>
-            <li className="cursor-pointer hover:underline">Features</li>
-            <li className="cursor-pointer hover:underline">Products</li>
-            <li className="cursor-pointer hover:underline">F&Q</li>
-            <li className="cursor-pointer hover:underline">Contact</li>
+        <div
+          className="fixed inset-0 bg-[#FBA6DE] bg-opacity-95 backdrop-blur-sm flex flex-col items-center justify-center z-40"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <ul className="flex flex-col gap-10 text-white font-semibold text-2xl text-center">
+            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Home</li>
+            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Features</li>
+            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Products</li>
+            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>F&Q</li>
+            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Contact</li>
           </ul>
-          <div className="flex gap-6 text-lg pt-2">
+          <div className="flex gap-10 text-white text-3xl pt-12">
             <FaUser className="cursor-pointer" />
             <FaShoppingBag className="cursor-pointer" />
             <FaSearch className="cursor-pointer" />
@@ -81,6 +82,90 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// import {
+//   FaUser,
+//   FaShoppingBag,
+//   FaSearch,
+//   FaBars,
+//   FaTimes,
+// } from "react-icons/fa";
+// import newLogo from "../assets/images/newLogo.png";
+// import { useState, useEffect } from "react";
+
+// const Navbar = () => {
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+//   const [isSticky, setIsSticky] = useState(false);
+
+//   // Detect scroll
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       if (window.scrollY > 100) {
+//         // Show after scrolling 100px
+//         setIsSticky(true);
+//       } else {
+//         setIsSticky(false);
+//       }
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <nav
+//       className={`w-full bg-[#FBA6DE] px-6 lg:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
+//         isSticky ? "fixed top-0 left-0 shadow-md" : "relative"
+//       }`}
+//     >
+//       <div>
+//         <img src={newLogo} alt="logoimg" className="h-15 w-auto" />
+//       </div>
+
+//       <div className="flex gap-10">
+//         <ul className="hidden lg:flex space-x-10 text-white font-medium text-[16px]">
+//           <li className="cursor-pointer hover:underline">Home</li>
+//           <li className="cursor-pointer hover:underline">Features</li>
+//           <li className="cursor-pointer hover:underline">Products</li>
+//           <li className="cursor-pointer hover:underline">F&Q</li>
+//           <li className="cursor-pointer hover:underline">Contact</li>
+//         </ul>
+  
+//         <div className="hidden lg:flex space-x-6 text-white text-lg">
+//           <FaUser className="cursor-pointer" />
+//           <FaShoppingBag className="cursor-pointer" />
+//           <FaSearch className="cursor-pointer" />
+//         </div>
+//       </div>
+
+//       <div
+//         className="lg:hidden text-white text-xl cursor-pointer"
+//         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+//       >
+//         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+//       </div>
+
+//       {isMobileMenuOpen && (
+//         <div className="absolute top-16 left-0 w-full bg-[#FBA6DE] text-white flex flex-col items-start px-6 py-4 gap-0 lg:hidden z-10 shadow-md">
+//           <ul className="flex flex-col gap-4 font-medium w-full">
+//             <li className="cursor-pointer hover:underline">Home</li>
+//             <li className="cursor-pointer hover:underline">Features</li>
+//             <li className="cursor-pointer hover:underline">Products</li>
+//             <li className="cursor-pointer hover:underline">F&Q</li>
+//             <li className="cursor-pointer hover:underline">Contact</li>
+//           </ul>
+//           <div className="flex gap-6 text-lg pt-2">
+//             <FaUser className="cursor-pointer" />
+//             <FaShoppingBag className="cursor-pointer" />
+//             <FaSearch className="cursor-pointer" />
+//           </div>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
 
 // import {
 //   FaUser,

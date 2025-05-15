@@ -9,47 +9,47 @@ function ProductDetailCard() {
   };
 
   return (
-    <div className="w-full lg:w-1/2 bg-[#FDE6F6] h-auto pl-[96px] pr-[96px] flex justify-center p-8 sm:py-20 lg:pl-[25px] lg:pr-[25px] xl:pl-[120px]">
+    <div className="w-full lg:w-1/2 bg-[#FDE6F6] h-auto pl-[96px] pr-[96px] flex justify-center p-8 sm:py-20 lg:pl-[25px] lg:pr-[25px] xl:pl-[120px] group hover:bg-[#E0268E] transition-colors duration-[4000ms] ease-in-out">
       <div className="w-[563px] lg:w-full lg:pl-[20px] lg:pr-[20px]">
-        <h2 className="text-[24px] w-[320px] font-extrabold text-black mb-4 xl:text-[42px]">
+        <h2 className="text-[24px] w-[320px] font-extrabold text-black group-hover:text-white transition-colors duration-4000 ease-in-out xl:text-[42px]">
           Compact & Travel Friendly
         </h2>
 
-        <p className="mt-[43px] text-[20px] leading-[32px] tracking-[-0.02em] text-[#747474] mb-6 lg:text-[16px] lg:w-[422px] xl:text-[17px]">
+        <p className="mt-[43px] text-[20px] leading-[32px] tracking-[-0.02em] text-[#747474] mb-6 lg:text-[16px] lg:w-[422px]  group-hover:text-white transition-colors duration-4000 ease-in-out xl:text-[17px]">
           Whether it's during her cycle or a moment to recharge, our <br />
           Whether it's during her cycle or a moment to recharge, our <br />
           Whether it's during her cycle or a moment to recharge, our
         </p>
 
         <div className="mt-10 mb-4 flex justify-between gap-14 items-center lg:justify-start lg:w-[90%]">
-          <p className="text-[20px] leading-[32px] tracking-[-0.02em] text-[#747474]">
+          <p className="text-[20px] leading-[32px] tracking-[-0.02em] text-[#747474]  group-hover:text-white transition-colors duration-4000 ease-in-out">
             Price:
           </p>
           <div className="flex flex-col">
             <span className="text-[20px] text-[#747474]">RS. 69.00</span>
-            <span className="text-gray-400 line-through text-sm">
+            <span className="text-gray-400 line-through  group-hover:text-white transition-colors duration-4000 ease-in-out text-sm">
               RS. 150.00
             </span>
           </div>
         </div>
 
         <div className="mt-10 mb-4 flex justify-between gap-14 items-center lg:justify-start lg:w-[90%]">
-          <p className="text-[20px] leading-[32px] tracking-[-0.02em] text-[#747474]">
+          <p className="text-[20px] leading-[32px] tracking-[-0.02em] text-[#747474]  group-hover:text-white transition-colors duration-4000 ease-in-out">
             Weight:
           </p>
-          <span className="inline-flex items-center justify-center bg-[#EBACCD] text-[#444444] font-semibold w-[76px] h-[52px] rounded-full text-sm">
+          <span className="inline-flex items-center justify-center bg-[#EBACCD] text-[#444444] font-semibold w-[76px] h-[52px] rounded-full text-sm  group-hover:text-white transition-colors duration-4000 ease-in-out">
             0.5
           </span>
         </div>
 
         <div className="mt-10 mb-6 flex justify-between gap-6 items-center lg:justify-start lg:w-[90%]">
-          <p className="text-[20px] leading-[32px] tracking-[-0.02em] text-[#747474]">
+          <p className="text-[20px] leading-[32px] tracking-[-0.02em] text-[#747474]  group-hover:text-white transition-colors duration-4000 ease-in-out">
             Quantity:
           </p>
           <div className="flex gap-4 items-center border border-[#E0268E] rounded-full px-4 py-1">
             <button
               onClick={decrement}
-              className="text-[#000000] text-lg font-bold hover:text-blue-700 focus:outline-none"
+              className="text-[#000000] text-lg font-bold hover:text-blue-700 focus:outline-none  group-hover:text-white transition-colors duration-4000 ease-in-out"
             >
               –
             </button>
@@ -58,14 +58,15 @@ function ProductDetailCard() {
             </span>
             <button
               onClick={increment}
-              className="text-[#000000] text-lg font-bold hover:text-blue-700 focus:outline-none"
+              className="text-[#000000] text-lg font-bold hover:text-blue-700 focus:outline-none  group-hover:text-white transition-colors duration-4000 ease-in-out"
             >
               +
             </button>
           </div>
         </div>
 
-        <button className="w-full bg-[#FDE6F6] border border-[#E0268E] mt-10 pt-[17px] pb-[17px] pl-[42px] pr-[42px] hover:bg-[#c1005e] text-[#c1005e] font-semibold rounded-full sm:w-[200px] sm:bg-[#E0268E] sm:text-[#FFFFFF]">
+        <button className="w-full bg-[#FDE6F6] border border-[#E0268E] mt-10 pt-[17px] pb-[17px] 
+        pl-[42px] pr-[42px]  group hover:bg-[#FDE6F6] transition-colors duration-[2000ms] ease-in-out text-[#c1005e] font-semibold rounded-full sm:w-[200px] sm:bg-[#E0268E] sm:text-[#FFFFFF] #FDE6F6">
           ADD TO CART
         </button>
       </div>

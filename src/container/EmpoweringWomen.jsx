@@ -9,7 +9,7 @@ function EmpoweringWomen() {
         </div>
         <div className=' flex flex-col pl-8 pr-8  gap-5 text-center w-full mx-auto sm:text-start lg:w-[400px] xl:w-[510px]'>
             <div>
-                <p className='font-dm-sans text-[24px] xl:text-[31px]'>
+                <p className='hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]'>
                     Wet Tissue
                 </p>
                 <p className='text-[#747474] text-[16px] xl:text-[20px]'>
@@ -17,7 +17,7 @@ function EmpoweringWomen() {
                 </p>
             </div>
             <div>
-                <p className='font-dm-sans text-[24px] xl:text-[31px]'>
+                <p className='hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]'>
                     Wet Tissue
                 </p>
                 <p className='text-[#747474] text-[16px] xl:text-[20px]'>
@@ -25,7 +25,7 @@ function EmpoweringWomen() {
                 </p>
             </div>
             <div>
-                <p className='font-dm-sans text-[24px] xl:text-[31px]'>
+                <p className='hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]'>
                     Wet Tissue
                 </p>
                 <p className='text-[#747474] text-[16px] xl:text-[20px]'>
@@ -33,7 +33,7 @@ function EmpoweringWomen() {
                 </p>
             </div>
             <div>
-                <p className='font-dm-sans text-[24px] xl:text-[31px]'>
+                <p className='hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]'>
                     Wet Tissue
                 </p>
                 <p className='text-[#747474] text-[16px] xl:text-[20px]'>
@@ -46,7 +46,7 @@ function EmpoweringWomen() {
         </div>
         <div className='pl-8 pr-8  flex flex-col gap-9 sm:w-[85%] lg:w-[800px] '>
             <div className='flex flex-col gap-10'>
-                <p className='font-dm-sans text-[24px] text-start xl:text-[31px]'>
+                <p className='hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] text-start xl:text-[31px]'>
                     Empowering Women with Hygiene Essentials, Right to Your Door
                 </p>
                 <li className='text-[16px] text-[#747474] xl:text-[20px]'>

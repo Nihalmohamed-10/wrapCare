@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import calender from "../assets/images/calender.png";
 import FaqQuestion from '../components/FaqQuestion';
 
@@ -7,9 +8,15 @@ function QuestionSection() {
     <div className='w-full bg-[#FDE6F6] px-4 pt-35 py-10 md:pt-[100px] md:pb-[100px] 
       flex flex-col items-center md:items-start justify-between gap-8 lg:flex-row lg:items-center lg:justify-center lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px] '>
       
-      <div className='w-full px-10 md:w-full lg:w-full'>
-        <img src={calender} alt="img" className="w-full h-auto " />
-      </div>
+      <motion.div
+        className='w-full px-10 md:w-full lg:w-full'
+        initial={{ scale: 0.1, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <img src={calender} alt="img" className="w-full h-auto" />
+      </motion.div>
 
       <div className='flex flex-col xl:gap-5 w-full md:w-[full] space-y-4'>
         <FaqQuestion />
@@ -17,12 +24,37 @@ function QuestionSection() {
         <FaqQuestion />
         <FaqQuestion />
       </div>
-      
     </div>
   );
 }
 
 export default QuestionSection;
+
+// import React from 'react';
+// import calender from "../assets/images/calender.png";
+// import FaqQuestion from '../components/FaqQuestion';
+
+// function QuestionSection() {
+//   return (
+//     <div className='w-full bg-[#FDE6F6] px-4 pt-35 py-10 md:pt-[100px] md:pb-[100px] 
+//       flex flex-col items-center md:items-start justify-between gap-8 lg:flex-row lg:items-center lg:justify-center lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px] '>
+      
+//       <div className='w-full px-10 md:w-full lg:w-full'>
+//         <img src={calender} alt="img" className="w-full h-auto " />
+//       </div>
+
+//       <div className='flex flex-col xl:gap-5 w-full md:w-[full] space-y-4'>
+//         <FaqQuestion />
+//         <FaqQuestion />
+//         <FaqQuestion />
+//         <FaqQuestion />
+//       </div>
+      
+//     </div>
+//   );
+// }
+
+// export default QuestionSection;
 
 // import React from 'react'
 // import calender from "../assets/images/calender.png"
