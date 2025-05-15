@@ -1,5 +1,5 @@
 import React from 'react'
-import kit from "../assets/images/kit.png"
+import kit from "../assets/images/Kit.png"
 import rash from "../assets/images/rashFree.png"
 function EmpoweringWomen() {
   return (
