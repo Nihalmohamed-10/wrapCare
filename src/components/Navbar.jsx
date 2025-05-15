@@ -1,0 +1,175 @@
+import {
+  FaUser,
+  FaShoppingBag,
+  FaSearch,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
+import newLogo from "../assets/images/newLogo.png";
+import { useState, useEffect } from "react";
+
+const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  // Detect scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        // Show after scrolling 100px
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav
+      className={`w-full bg-[#FBA6DE] px-6 lg:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
+        isSticky ? "fixed top-0 left-0 shadow-md" : "relative"
+      }`}
+    >
+      <div>
+        <img src={newLogo} alt="logoimg" className="h-15 w-auto" />
+      </div>
+
+      <div className="flex gap-10">
+        <ul className="hidden lg:flex space-x-10 text-white font-medium text-[16px]">
+          <li className="cursor-pointer hover:underline">Home</li>
+          <li className="cursor-pointer hover:underline">Features</li>
+          <li className="cursor-pointer hover:underline">Products</li>
+          <li className="cursor-pointer hover:underline">F&Q</li>
+          <li className="cursor-pointer hover:underline">Contact</li>
+        </ul>
+  
+        <div className="hidden lg:flex space-x-6 text-white text-lg">
+          <FaUser className="cursor-pointer" />
+          <FaShoppingBag className="cursor-pointer" />
+          <FaSearch className="cursor-pointer" />
+        </div>
+      </div>
+
+      <div
+        className="lg:hidden text-white text-xl cursor-pointer"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      {isMobileMenuOpen && (
+        <div className="absolute top-16 left-0 w-full bg-[#FBA6DE] text-white flex flex-col items-start px-6 py-4 gap-0 lg:hidden z-10 shadow-md">
+          <ul className="flex flex-col gap-4 font-medium w-full">
+            <li className="cursor-pointer hover:underline">Home</li>
+            <li className="cursor-pointer hover:underline">Features</li>
+            <li className="cursor-pointer hover:underline">Products</li>
+            <li className="cursor-pointer hover:underline">F&Q</li>
+            <li className="cursor-pointer hover:underline">Contact</li>
+          </ul>
+          <div className="flex gap-6 text-lg pt-2">
+            <FaUser className="cursor-pointer" />
+            <FaShoppingBag className="cursor-pointer" />
+            <FaSearch className="cursor-pointer" />
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
+
+// import {
+//   FaUser,
+//   FaShoppingBag,
+//   FaSearch,
+//   FaBars,
+//   FaTimes,
+// } from "react-icons/fa";
+// import newLogo from "../assets/images/newLogo.png";
+// import { useState } from "react";
+
+// const Navbar = () => {
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+//   return (
+//     <nav className="fixed top-0 left-0 w-full bg-[#FBA6DE] px-6 lg:px-[120px] py-4 flex justify-between items-center z-50 shadow-md">
+//       <div>
+//         <img src={newLogo} alt="logoimg" className="h-15 w-auto" />
+//       </div>
+
+//       <ul className="hidden lg:flex space-x-10 text-white font-medium text-[16px]">
+//         <li className="cursor-pointer hover:underline">Home</li>
+//         <li className="cursor-pointer hover:underline">Features</li>
+//         <li className="cursor-pointer hover:underline">Products</li>
+//         <li className="cursor-pointer hover:underline">F&Q</li>
+//         <li className="cursor-pointer hover:underline">Contact</li>
+//       </ul>
+
+//       <div className="hidden lg:flex space-x-6 text-white text-lg">
+//         <FaUser className="cursor-pointer" />
+//         <FaShoppingBag className="cursor-pointer" />
+//         <FaSearch className="cursor-pointer" />
+//       </div>
+
+//       <div
+//         className="lg:hidden text-white text-xl cursor-pointer"
+//         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+//       >
+//         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+//       </div>
+
+//       {isMobileMenuOpen && (
+//         <div className="absolute top-16 left-0 w-full bg-[#FBA6DE] text-white flex flex-col items-start px-6 py-4 gap-4 lg:hidden z-10 shadow-md">
+//           <ul className="flex flex-col gap-4 font-medium w-full">
+//             <li className="cursor-pointer hover:underline">Home</li>
+//             <li className="cursor-pointer hover:underline">Features</li>
+//             <li className="cursor-pointer hover:underline">Products</li>
+//             <li className="cursor-pointer hover:underline">F&Q</li>
+//             <li className="cursor-pointer hover:underline">Contact</li>
+//           </ul>
+//           <div className="flex gap-6 text-lg pt-2">
+//             <FaUser className="cursor-pointer" />
+//             <FaShoppingBag className="cursor-pointer" />
+//             <FaSearch className="cursor-pointer" />
+//           </div>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+// import { FaUser, FaShoppingBag, FaSearch } from "react-icons/fa";
+// import logo2 from "../assets/images/logo2.jpg";
+// const Navbar = () => {
+//   return (
+//     <nav className="bg-[#FBA6DE] pt-[16px] pb-[16px] pl-[120px] pr-[120px] flex justify-around items-center">
+//       <div className="">
+//         <img src={logo2} alt="logoimg" />
+//       </div>
+
+//       <div className=" flex justify-end gap-15 w-[67%]">
+//         <ul className="hidden md:flex space-x-15 text-white font-medium">
+//           <li className="cursor-pointer text-[16px]  hover:underline">Home</li>
+//           <li className="cursor-pointer hover:underline">Features</li>
+//           <li className="cursor-pointer hover:underline">Products</li>
+//           <li className="cursor-pointer hover:underline">F&Q</li>
+//           <li className="cursor-pointer hover:underline">Contact</li>
+//         </ul>
+
+//         <div className="flex space-x-10 text-white text-lg">
+//           <FaUser className="cursor-pointer" />
+//           <FaShoppingBag className="cursor-pointer" />
+//           <FaSearch className="cursor-pointer" />
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
