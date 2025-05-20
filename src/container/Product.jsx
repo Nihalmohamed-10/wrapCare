@@ -10,9 +10,11 @@ function Product() {
         <ProductDetailCard />
       </div>
 
-      <div className="flex flex-col lg:flex-row">
-        <ProductDetailCard />
+      <div className="flex flex-col lg:flex-row lg:flex-row-reverse" >
+        
         <ProductImg />
+        <ProductDetailCard />
+        
       </div>
 
       <div className="flex flex-col lg:flex-row">

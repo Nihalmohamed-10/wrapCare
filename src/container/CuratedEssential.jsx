@@ -15,9 +15,10 @@ function CuratedEssential() {
         {aboutData.map((item) => (
           <div
             key={item.id}
-            className={clsx({
-              "md:pt-35": item.id % 2 === 0,
-            })}
+            className={clsx( item.id % 2===0 && "2xl:pt-35"
+              // "xl:pt-35": item.id % 2 === 0,
+              
+            )}
           >
             <CurvyDivs title={item.title} img={item.img} isEven={item.id % 2 === 0} />
           </div>
