@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 
 const faqs = [
@@ -47,7 +48,7 @@ function FaqQuestion() {
             >
               {faq.question}
             </h3>
-            <span className="text-xl">
+            <span className="text-xl cursor-pointer">
               {activeIndex === index ? "❌" : "➕"}
             </span>
           </button>
@@ -64,6 +65,100 @@ function FaqQuestion() {
 }
 
 export default FaqQuestion;
+// import React, { useState } from "react";
+// import {
+//   Accordion,
+//   AccordionSummary,
+//   AccordionDetails,
+//   Typography,
+//   Box,
+// } from "@mui/material";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import CloseIcon from "@mui/icons-material/Close";
+// import AddIcon from "@mui/icons-material/Add";
+
+// const faqs = [
+//   {
+//     question: "Can I use the Landify for a client’s product?",
+//     answer:
+//       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem.",
+//   },
+// ];
+
+// function FaqQuestion() {
+//   const [expanded, setExpanded] = useState(false);
+
+//   const handleChange = (panel) => (event, isExpanded) => {
+//     setExpanded(isExpanded ? panel : false);
+//   };
+
+//   return (
+//     <Box sx={{ p: 4, maxWidth: 800, mx: "auto" }}>
+//       {faqs.map((faq, index) => {
+//         const panelId = `panel-${index}`;
+//         const isExpanded = expanded === panelId;
+//         return (
+//           <Accordion
+//             key={index}
+//             expanded={isExpanded}
+//             onChange={handleChange(panelId)}
+//             sx={{
+//               backgroundColor: "transparent", 
+//               boxShadow: "none", 
+//               borderBottom: "1px solid rgba(224, 38, 142, 0.5)",
+//               "&:before": { display: "none" },
+//               "& .MuiAccordionSummary-root": {
+//                 paddingTop: "10px",
+//                 paddingBottom: "10px",
+//               },
+//               "& .MuiAccordionSummary-content": {
+//                 margin: 0,
+//               },
+//             }}
+//           >
+//             <AccordionSummary
+//               expandIcon={
+//                 isExpanded ? (
+//                   <CloseIcon sx={{ color: "#E0268E" }} />
+//                 ) : (
+//                   <AddIcon sx={{ color: "black" }} />
+//                 )
+//               }
+//               aria-controls={`${panelId}-content`}
+//               id={`${panelId}-header`}
+//             >
+//               <Typography
+//                 sx={{
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontWeight: 600,
+//                   fontSize: { xs: 18, xl: 22 },
+//                   color: isExpanded ? "#E0268E" : "black",
+//                   width: { xs: 219, lg: 420 },
+//                 }}
+//               >
+//                 {faq.question}
+//               </Typography>
+//             </AccordionSummary>
+//             <AccordionDetails>
+//               <Typography
+//                 sx={{
+//                   color: "gray",
+//                   fontSize: 18,
+//                   lineHeight: "180%",
+//                   mt: 1,
+//                 }}
+//               >
+//                 {faq.answer}
+//               </Typography>
+//             </AccordionDetails>
+//           </Accordion>
+//         );
+//       })}
+//     </Box>
+//   );
+// }
+
+// export default FaqQuestion;
 
 // import React, { useState, useRef, useEffect } from "react";
 
@@ -90,7 +185,7 @@ export default FaqQuestion;
 
 //   return (
 //     <div ref={faqRef} className="p-2 space-y-4">
-    
+
 //       <div className="pb-2 sm:w-[85%] mx-auto lg:w-full">
 //         <div
 //           className="flex justify-between items-center  cursor-pointer border-b border-[#E0268E80]"
