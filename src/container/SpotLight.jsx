@@ -4,6 +4,7 @@ import spotImng from "../assets/images/spotImg.png";
 const Spotlight = () => {
   return (
     <section
+    id="home-section"
       className="w-full h-[734px] bg-cover bg-center text-white flex items-center px-6  "
       style={{ backgroundImage: `url(${spotImng})` }}
     >

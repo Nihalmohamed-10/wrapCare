@@ -25,6 +25,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+   const scrollToHomeSection = () => {
+    const element = document.getElementById("home-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const scrollToCuratedEssential = () => {
     const element = document.getElementById("curated-essential");
     if (element) {
@@ -65,7 +72,9 @@ const Navbar = () => {
 
       <div className="hidden lg:flex gap-10">
         <ul className="flex space-x-10 text-white font-medium text-[16px]">
-          <li className="cursor-pointer hover:underline">Home</li>
+          <li className="cursor-pointer hover:underline"
+          onClick={scrollToHomeSection}
+          >Home</li>
           <li
             className="cursor-pointer hover:underline"
             onClick={scrollToCuratedEssential}
