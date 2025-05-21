@@ -3,7 +3,9 @@ import { FaFacebookF, FaTwitter, FaVimeoV, FaYoutube } from "react-icons/fa";
 import newLogo from "../assets/images/newLogo.png";
 const Footer = () => {
   return (
-    <footer className="w-full font-sans-serif bg-[#FDE6F6] text-gray-900 lg:px-14 py-10 xl:pl-[162px] xl:pr-[162px]">
+    <footer
+    id="footer-section"
+    className="w-full font-sans-serif bg-[#FDE6F6] text-gray-900 lg:px-14 py-10 xl:pl-[162px] xl:pr-[162px]">
       <div className="flex flex-col w-full  justify-between items-center gap-6 border-b border-[#E0268E80] pb-10 lg:flex-row lg:pr-10 lg:pl-10">
         <ul className="flex flex-col flex-wrap gap-10 text-start items-center justify-center text-[16px] font-medium lg:flex-row">
           <li>

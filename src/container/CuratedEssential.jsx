@@ -5,7 +5,10 @@ import aboutData from "../../src/constants/index";
 
 function CuratedEssential() {
   return (
-    <div className="bg-[#FDE6F6] font-dm-sans pt-[60px] md:pt-[100px] pb-[60px] md:pb-[60px] px-4 md:w-full">
+    <div
+      id="curated-essential"
+      className="bg-[#FDE6F6] font-dm-sans pt-[60px] md:pt-[100px] pb-[60px] md:pb-[60px] px-4 md:w-full"
+    >
       <div className="text-center mx-auto max-w-2xl px-2">
         <p className="text-3xl sm:text-4xl sm:w-[77%] sm:mx-auto md:text-[60px] leading-snug md:leading-[80px] md:w-full font-medium">
           Curated Essentials for Her Comfort
@@ -21,7 +24,7 @@ function CuratedEssential() {
               title={item.title}
               img={item.img}
               isEven={item.id % 2 === 0}
-              reverseAt2XL={item.id === 2} 
+              reverseAt2XL={item.id === 2}
               num={item.num}
             />
           </div>
@@ -32,6 +35,7 @@ function CuratedEssential() {
 }
 
 export default CuratedEssential;
+
 
 // import React from "react";
 // import clsx from "clsx";

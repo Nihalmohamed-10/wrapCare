@@ -25,6 +25,34 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToCuratedEssential = () => {
+    const element = document.getElementById("curated-essential");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToProductSection = () => {
+    const element = document.getElementById("product-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+   const scrollToFacSection = () => {
+    const element = document.getElementById("fac-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToFooterSection = () => {
+    const element = document.getElementById("footer-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       className={`w-full bg-[#FBA6DE] px-6 lg:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
@@ -38,10 +66,24 @@ const Navbar = () => {
       <div className="hidden lg:flex gap-10">
         <ul className="flex space-x-10 text-white font-medium text-[16px]">
           <li className="cursor-pointer hover:underline">Home</li>
-          <li className="cursor-pointer hover:underline">Features</li>
-          <li className="cursor-pointer hover:underline">Products</li>
-          <li className="cursor-pointer hover:underline">F&Q</li>
-          <li className="cursor-pointer hover:underline">Contact</li>
+          <li
+            className="cursor-pointer hover:underline"
+            onClick={scrollToCuratedEssential}
+          >
+            Features
+          </li>
+          <li
+            className="cursor-pointer hover:underline"
+            onClick={scrollToProductSection}
+          >
+            Products
+          </li>
+          <li className="cursor-pointer hover:underline"
+          onClick={scrollToFacSection}
+          >F&Q</li>
+          <li className="cursor-pointer hover:underline"
+          onClick={scrollToFooterSection}
+          >Contact</li>
         </ul>
 
         <div className="flex space-x-6 text-white text-lg">
@@ -64,11 +106,29 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <ul className="flex flex-col gap-10 text-white font-semibold text-2xl text-center">
-            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Home</li>
-            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Features</li>
-            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Products</li>
-            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>F&Q</li>
-            <li className="cursor-pointer hover:underline" onClick={() => setIsMobileMenuOpen(false)}>Contact</li>
+            <li className="cursor-pointer hover:underline">Home</li>
+            <li
+              className="cursor-pointer hover:underline"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMobileMenuOpen(false);
+                scrollToCuratedEssential();
+              }}
+            >
+              Features
+            </li>
+            <li
+              className="cursor-pointer hover:underline"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMobileMenuOpen(false);
+                scrollToProductSection();
+              }}
+            >
+              Products
+            </li>
+            <li className="cursor-pointer hover:underline">F&Q</li>
+            <li className="cursor-pointer hover:underline">Contact</li>
           </ul>
           <div className="flex gap-10 text-white text-3xl pt-12">
             <FaUser className="cursor-pointer" />
@@ -82,6 +142,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
 
 // import {
 //   FaUser,
