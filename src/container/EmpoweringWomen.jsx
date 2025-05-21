@@ -41,7 +41,7 @@ function EmpoweringWomen() {
                 </p>
             </div>
         </div>
-        <div className='w-full hidden xl:block '>
+        <div className='w-full hidden xl:block 2xl:w-[67%]'>
             <img src={kit} alt="kitImg" />
         </div>
         <div className='pl-8 pr-8  flex flex-col gap-9 sm:w-[85%] lg:w-[800px] xl:pl-0 xl:pr-0 xl:w-[827px]'>

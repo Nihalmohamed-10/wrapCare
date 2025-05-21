@@ -2,12 +2,12 @@ import React from "react";
 
 const SubscribeSection = () => {
   return (
-    <div className="font-dm-sans bg-[#FDE6F6] flex justify-center px-4 py-6 xl:pl-[120px] xl:pr-[120px] ">
+    <div className=" bg-[#FDE6F6] flex justify-center px-4 py-6 xl:pl-[120px] xl:pr-[120px] ">
       <div className="bg-[#F3D1E3] w-full  rounded-2xl px-6 py-20 flex flex-col sm:w-[85%]
       lg:pl-[50px] lg:pr-[50px] lg:flex-row items-center justify-between gap-8 xl:w-full">
         
        
-        <div className="text-center md:text-left">
+        <div className="font-dm-sans text-center md:text-left">
           <h2 className="text-[30px] sm:text-3xl md:text-4xl font-bold text-gray-800 xl:text-[56px]">
             Subscribe to Wrapcare
           </h2>

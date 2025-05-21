@@ -22,6 +22,7 @@ function CuratedEssential() {
               img={item.img}
               isEven={item.id % 2 === 0}
               reverseAt2XL={item.id === 2} 
+              num={item.num}
             />
           </div>
         ))}

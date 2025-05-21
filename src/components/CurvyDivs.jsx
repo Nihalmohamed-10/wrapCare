@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
-function CurvyDivs({ title, img, isEven, reverseAt2XL }) {
+function CurvyDivs({ title, img, isEven, reverseAt2XL, num }) {
+  const [isTapped, setIsTapped] = useState(false);
+
   return (
     <div
+      onClick={() => setIsTapped((prev) => !prev)}
       className={`group relative flex flex-col items-center justify-start 
         bg-[#FBA6DE] rounded-tl-[80px] rounded-br-[80px] p-8 pb-[85px] text-white 
         sm:w-full sm:pb-[120px] md:pb-[69px] overflow-hidden
         ${reverseAt2XL ? "2xl:flex-col-reverse" : ""}`}
     >
-      {/* Hover Overlay */}
-      <div className="absolute inset-0 bg-[#E0268E] transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top z-0" />
+      {/* Simulated Hover Overlay */}
+      <div
+        className={`absolute inset-0 bg-[#E0268E] transform ${
+          isTapped ? "scale-y-100" : "scale-y-0"
+        } group-hover:scale-y-100 transition-transform duration-500 origin-top z-0`}
+      />
 
-      {/* Title */}
       <div className="relative z-10 text-center mt-[44px]">
         <p className="text-[#000000] group-hover:text-white text-[40px] transition-colors duration-300">
           {title}
         </p>
       </div>
 
-      {/* Image + Number */}
       <div className="relative z-10 w-[293px] mx-auto mt-[44px] sm:w-[320px]">
         <img src={img} alt="img" className="w-full" />
         <h2
@@ -28,14 +33,51 @@ function CurvyDivs({ title, img, isEven, reverseAt2XL }) {
             transition-all duration-500"
           style={{ WebkitTextStroke: "1px black" }}
         >
-          02
+          {num}
         </h2>
       </div>
     </div>
   );
 }
 
-export default CurvyDivs;
+// import React from "react";
+
+// function CurvyDivs({ title, img, isEven, reverseAt2XL, num }) {
+//   return (
+//     <div
+//       className={`group relative flex flex-col items-center justify-start 
+//         bg-[#FBA6DE] rounded-tl-[80px] rounded-br-[80px] p-8 pb-[85px] text-white 
+//         sm:w-full sm:pb-[120px] md:pb-[69px] overflow-hidden
+//         ${reverseAt2XL ? "2xl:flex-col-reverse" : ""}`}
+//     >
+//       {/* Hover Overlay */}
+//       <div className="absolute inset-0 bg-[#E0268E] transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top z-0" />
+
+//       {/* Title */}
+//       <div className="relative z-10 text-center mt-[44px]">
+//         <p className="text-[#000000] group-hover:text-white text-[40px] transition-colors duration-300">
+//           {title}
+//         </p>
+//       </div>
+
+//       {/* Image + Number */}
+//       <div className="relative z-10 w-[293px] mx-auto mt-[44px] sm:w-[320px]">
+//         <img src={img} alt="img" className="w-full" />
+//         <h2
+//           className="absolute top-[241px] left-[263px] transform -translate-x-1/2 -translate-y-1/2
+//             flex items-center justify-center text-center w-[76px] h-[80px]
+//             font-bold text-[74px] text-transparent group-hover:text-[#E0268E]
+//             transition-all duration-500"
+//           style={{ WebkitTextStroke: "1px black" }}
+//         >
+//           {num}
+//         </h2>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default CurvyDivs;
 
 
 // import React from "react";

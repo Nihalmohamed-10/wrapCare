@@ -9,7 +9,7 @@ function ProductDetailCard() {
   };
 
   return (
-    <div className="w-full lg:w-1/2 bg-[#FDE6F6] h-auto pl-[96px] pr-[96px] flex justify-center p-8 sm:py-20 lg:pl-[25px] lg:pr-[25px] xl:pl-[120px] group hover:bg-[#E0268E] transition-colors duration-[4000ms] ease-in-out">
+    <div className="w-full lg:w-1/2 bg-[#FDE6F6] h-auto pl-[96px] pr-[96px] flex justify-center p-8 sm:py-20 lg:pl-[25px] lg:pr-[25px] xl:pl-[120px] group hover:bg-[#E0268E] transition-colors duration-[4000ms] ease-in-out lg:bg-[#F4F4F5]">
       <div className="w-[563px] lg:w-full lg:pl-[20px] lg:pr-[20px]">
         <h2 className="text-[24px] w-[320px] font-extrabold text-black group-hover:text-white transition-colors duration-4000 ease-in-out xl:text-[42px]">
           Compact & Travel Friendly
