@@ -11,7 +11,7 @@ function CurvyDivs({ title, img, isEven, reverseAt2XL, num }) {
         sm:w-full sm:pb-[120px] md:pb-[69px] overflow-hidden
         ${reverseAt2XL ? "2xl:flex-col-reverse" : ""}`}
     >
-      {/* Simulated Hover Overlay */}
+     
       <div
         className={`absolute inset-0 bg-[#E0268E] transform ${
           isTapped ? "scale-y-100" : "scale-y-0"
