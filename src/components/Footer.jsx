@@ -1,20 +1,93 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaVimeoV, FaYoutube } from "react-icons/fa";
 import newLogo from "../assets/images/footerLogo.png";
+import { useEffect } from "react";
 const Footer = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToHomeSection = () => {
+    const element = document.getElementById("home-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToCuratedEssential = () => {
+    const element = document.getElementById("curated-essential");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToProductSection = () => {
+    const element = document.getElementById("product-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToFacSection = () => {
+    const element = document.getElementById("fac-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToFooterSection = () => {
+    const element = document.getElementById("footer-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer
-    id="footer-section"
-    className="w-full font-sans-serif bg-[#FDE6F6] text-gray-900 lg:px-14 py-10 xl:pl-[162px] xl:pr-[162px]">
+      id="footer-section"
+      className="w-full font-sans-serif bg-[#FDE6F6] text-gray-900 lg:px-14 py-10 xl:pl-[162px] xl:pr-[162px]"
+    >
       <div className="flex flex-col w-full  justify-between items-center gap-6 border-b border-[#E0268E80] pb-10 lg:flex-row lg:pr-10 lg:pl-10">
         <ul className="flex flex-col flex-wrap gap-10 text-start items-center justify-center text-[16px] font-medium lg:flex-row">
-          <li>
-            <a href="#" className="hover:text-pink-600">
+          <li onClick={scrollToHomeSection}>
+            <a className="hover:text-pink-600 cursor-pointer">Home</a>
+          </li>
+          <li onClick={scrollToCuratedEssential}>
+            <a className="hover:text-pink-600 cursor-pointer">Features</a>
+          </li>
+          <li onClick={scrollToProductSection}>
+            <a className="hover:text-pink-600 cursor-pointer">Products</a>
+          </li>
+          <li onClick={scrollToFacSection}>
+            <a className="hover:text-pink-600 cursor-pointer">F&Q</a>
+          </li>
+          <li onClick={scrollToFooterSection}>
+            <a className="hover:text-pink-600 cursor-pointer">Contact</a>
+          </li>
+        </ul>
+
+        {/* <ul className="flex flex-col flex-wrap gap-10 text-start items-center justify-center text-[16px] font-medium lg:flex-row">
+          <li 
+          onClick={scrollToHomeSection}
+          >
+            <a href="" className="hover:text-pink-600">
               Home
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-pink-600">
+            <a href="" className="hover:text-pink-600" 
+            onClick={scrollToCuratedEssential}
+            >
+
               Features
             </a>
           </li>
@@ -33,7 +106,7 @@ const Footer = () => {
               Contact
             </a>
           </li>
-        </ul>
+        </ul> */}
 
         <div className="flex gap-12 text-xl">
           <a href="#" className="hover:text-pink-600">

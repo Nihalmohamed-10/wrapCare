@@ -119,7 +119,13 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <ul className="flex flex-col gap-10 text-white font-semibold text-2xl text-center">
-            <li className="cursor-pointer hover:underline">Home</li>
+            <li className="cursor-pointer hover:underline"
+            onClick={(e) => {
+                e.stopPropagation();
+                setIsMobileMenuOpen(false);
+                scrollToHomeSection();
+              }}
+            >Home</li>
             <li
               className="cursor-pointer hover:underline"
               onClick={(e) => {
@@ -140,8 +146,20 @@ const Navbar = () => {
             >
               Products
             </li>
-            <li className="cursor-pointer hover:underline">F&Q</li>
-            <li className="cursor-pointer hover:underline">Contact</li>
+            <li className="cursor-pointer hover:underline"
+            onClick={(e) => {
+                e.stopPropagation();
+                setIsMobileMenuOpen(false);
+                scrollToFacSection();
+              }}
+            >F&Q</li>
+            <li className="cursor-pointer hover:underline"
+            onClick={(e) => {
+                e.stopPropagation();
+                setIsMobileMenuOpen(false);
+                scrollToFooterSection();
+              }}
+            >Contact</li>
           </ul>
           <div className="flex gap-10 text-white text-3xl pt-12">
             <FaUser className="cursor-pointer" />

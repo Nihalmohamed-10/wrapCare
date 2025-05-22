@@ -1,5 +1,11 @@
-
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const faqs = [
   {
@@ -7,64 +13,142 @@ const faqs = [
     answer:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem.",
   },
-
 ];
 
-function FaqQuestion() {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const faqRef = useRef(null);
+export default function FaqQuestion() {
+  const [expanded, setExpanded] = React.useState(false);
 
-  const toggleFAQ = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (faqRef.current && !faqRef.current.contains(event.target)) {
-        setActiveIndex(null);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   return (
-    <div ref={faqRef} className="p-4 space-y-6">
+    <div className="p-4 space-y-6">
       {faqs.map((faq, index) => (
-        <div
+        <Accordion
           key={index}
-          className="pb-2 sm:w-[85%] mx-auto lg:w-full border-b border-[#E0268E80]"
+          expanded={expanded === index}
+          onChange={handleChange(index)}
+          sx={{
+            backgroundColor: "transparent", 
+            borderBottom: "1px solid #E0268E80",
+            boxShadow: "none",
+            "&:before": { display: "none" },
+            paddingTop: 2,
+          }}
         >
-          <button
-            className="w-full text-left flex justify-between items-center pt-10 focus:outline-none"
-            onClick={() => toggleFAQ(index)}
-            aria-expanded={activeIndex === index}
+          <AccordionSummary
+            expandIcon={
+              expanded === index ? (
+                <span style={{ fontSize: 20 }}>❌</span>
+              ) : (
+                <span style={{ fontSize: 20 }}>➕</span>
+              )
+            }
+            aria-controls={`panel${index}-content`}
+            id={`panel${index}-header`}
+            sx={{
+              paddingX: 0,
+              backgroundColor: "transparent", 
+            }}
           >
-            <h3
-              className={`font-dm-sans font-semibold text-[18px] w-[219px] lg:w-[420px] transition-colors duration-300 xl:text-[22px] ${
-                activeIndex === index ? "text-[#E0268E]" : "text-black"
-              }`}
+            <Typography
+              sx={{
+                fontFamily: "DM Sans, sans-serif",
+                fontWeight: 600,
+                fontSize: {
+                  xs: "18px",
+                  xl: "22px",
+                },
+                color: expanded === index ? "#E0268E" : "black",
+                width: { xs: "219px", lg: "490px" },
+              }}
             >
               {faq.question}
-            </h3>
-            <span className="text-xl cursor-pointer">
-              {activeIndex === index ? "❌" : "➕"}
-            </span>
-          </button>
-
-          {activeIndex === index && (
-            <p className="text-gray-600 mt-3 text-[22px] leading-[180%]">
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails sx={{ paddingX: 0 }}>
+            <Typography
+              sx={{
+                paddingX: 0,
+                backgroundColor: "transparent", // optional, for safety
+              }}
+            >
               {faq.answer}
-            </p>
-          )}
-        </div>
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
       ))}
     </div>
   );
 }
 
-export default FaqQuestion;
+// import React, { useState, useRef, useEffect } from "react";
+
+// const faqs = [
+//   {
+//     question: "Can I use the Landify for a client’s product?",
+//     answer:
+//       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem.",
+//   },
+
+// ];
+
+// function FaqQuestion() {
+//   const [activeIndex, setActiveIndex] = useState(null);
+//   const faqRef = useRef(null);
+
+//   const toggleFAQ = (index) => {
+//     setActiveIndex(index === activeIndex ? null : index);
+//   };
+
+//   useEffect(() => {
+//     const handleClickOutside = (event) => {
+//       if (faqRef.current && !faqRef.current.contains(event.target)) {
+//         setActiveIndex(null);
+//       }
+//     };
+
+//     document.addEventListener("mousedown", handleClickOutside);
+//     return () => document.removeEventListener("mousedown", handleClickOutside);
+//   }, []);
+
+//   return (
+//     <div ref={faqRef} className="p-4 space-y-6">
+//       {faqs.map((faq, index) => (
+//         <div
+//           key={index}
+//           className="pb-2 sm:w-[85%] mx-auto lg:w-full border-b border-[#E0268E80]"
+//         >
+//           <button
+//             className="w-full text-left flex justify-between items-center pt-10 focus:outline-none"
+//             onClick={() => toggleFAQ(index)}
+//             aria-expanded={activeIndex === index}
+//           >
+//             <h3
+//               className={`font-dm-sans font-semibold text-[18px] w-[219px] lg:w-[420px] transition-colors duration-300 xl:text-[22px] ${
+//                 activeIndex === index ? "text-[#E0268E]" : "text-black"
+//               }`}
+//             >
+//               {faq.question}
+//             </h3>
+//             <span className="text-xl cursor-pointer">
+//               {activeIndex === index ? "❌" : "➕"}
+//             </span>
+//           </button>
+
+//           {activeIndex === index && (
+//             <p className="text-gray-600 mt-3 text-[22px] leading-[180%]">
+//               {faq.answer}
+//             </p>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default FaqQuestion;
 // import React, { useState } from "react";
 // import {
 //   Accordion,
@@ -103,8 +187,8 @@ export default FaqQuestion;
 //             expanded={isExpanded}
 //             onChange={handleChange(panelId)}
 //             sx={{
-//               backgroundColor: "transparent", 
-//               boxShadow: "none", 
+//               backgroundColor: "transparent",
+//               boxShadow: "none",
 //               borderBottom: "1px solid rgba(224, 38, 142, 0.5)",
 //               "&:before": { display: "none" },
 //               "& .MuiAccordionSummary-root": {

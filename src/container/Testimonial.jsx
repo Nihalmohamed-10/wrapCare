@@ -1,5 +1,3 @@
-
-
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -30,7 +28,7 @@ const TestimonialSlider = () => {
             modules={[Navigation, Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
-            autoplay={{ delay: 1000 }} 
+            autoplay={{ delay: 3000 }} 
           >
             <SwiperSlide>
               <div className="bg-white rounded-2xl shadow-md p-6">

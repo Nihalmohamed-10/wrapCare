@@ -49,7 +49,7 @@ function ProductDetailCard() {
           <div className="flex gap-4 items-center border border-[#E0268E] rounded-full px-4 py-1">
             <button
               onClick={decrement}
-              className="text-[#000000] text-lg font-bold hover:text-blue-700 focus:outline-none  "
+              className="cursor-pointer text-[#000000] text-lg font-bold hover:text-blue-700 focus:outline-none  "
             >
               –
             </button>
@@ -58,14 +58,14 @@ function ProductDetailCard() {
             </span>
             <button
               onClick={increment}
-              className="text-[#000000] text-lg font-bold hover:text-blue-700 focus:outline-none "
+              className="cursor-pointer text-[#000000] text-lg font-bold hover:text-blue-700 focus:outline-none "
             >
               +
             </button>
           </div>
         </div>
 
-        <button className="w-full bg-[#FDE6F6] border border-[#E0268E] mt-10 pt-[17px] pb-[17px] 
+        <button className="w-full cursor-pointer bg-[#FDE6F6] border border-[#E0268E] mt-10 pt-[17px] pb-[17px] 
         pl-[42px] pr-[42px]  group hover:bg-[#FDE6F6] transition-colors duration-[2000ms] ease-in-out text-[#c1005e] font-semibold rounded-full sm:w-[200px] sm:bg-[#E0268E] sm:text-[#FFFFFF] #FDE6F6">
           ADD TO CART
         </button>
