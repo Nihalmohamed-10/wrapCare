@@ -40,7 +40,7 @@ const Spotlight = () => {
           variants={slideUp}
           initial="hidden"
           animate="visible"
-          className="font-dm-sans text-[52px] sm:text-4xl sm:text-start sm:w-[77%] font-[400] leading-tight mb-6 lg:w-[47%] xl:text-[50px] xl:w-[404px] 2xl:text-[72px] 2xl:w-[583px] 2xl:font-normaly"
+          className="font-dm-serif text-[52px] sm:text-4xl sm:text-start sm:w-[77%] font-[400] leading-tight mb-6 lg:w-[47%] xl:text-[50px] xl:w-[404px] 2xl:text-[72px] 2xl:w-[583px] 2xl:font-normaly"
         >
           From Periods to Pampering—We’ve Got Her Covered
         </motion.h1>
