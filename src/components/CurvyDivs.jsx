@@ -16,16 +16,15 @@ function CurvyDivs({ title, img, isEven, reverseAt2XL, num }) {
         sm:w-full sm:pb-[120px] md:pb-[69px] overflow-hidden
         ${reverseAt2XL ? "2xl:flex-col-reverse" : ""}`}
     >
-      {/* Overlay for hover/tap */}
+
       <div
         className={`absolute inset-0 bg-[#E0268E] transition-transform duration-500 origin-top z-0
         ${isTapped ? "scale-y-100" : "scale-y-0"} group-hover:scale-y-100 transform`}
       />
 
-      {/* Title */}
       <div className="relative z-10 text-center mt-[44px]">
         <p
-          className={`text-[40px] transition-colors duration-300 ${
+          className={`font-dm-serif text-[40px] transition-colors duration-300 ${
             isTapped ? "text-white" : "text-[#000000]"
           } group-hover:text-white`}
         >
@@ -33,7 +32,7 @@ function CurvyDivs({ title, img, isEven, reverseAt2XL, num }) {
         </p>
       </div>
 
-      {/* Image + Number */}
+ 
       <div className="relative z-10 w-[293px] mx-auto mt-[44px] sm:w-[320px]">
         <img src={img} alt="img" className="w-full" />
         <h2

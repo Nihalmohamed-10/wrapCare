@@ -54,7 +54,7 @@ export default function FaqQuestion() {
           >
             <Typography
               sx={{
-                fontFamily: "DM Sans, sans-serif",
+                fontFamily: "DM Sans, sans-serif-text",
                 fontWeight: 600,
                 fontSize: {
                   xs: "18px",

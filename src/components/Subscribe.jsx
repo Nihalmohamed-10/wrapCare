@@ -7,8 +7,8 @@ const SubscribeSection = () => {
       lg:pl-[50px] lg:pr-[50px] lg:flex-row items-center justify-between gap-8 xl:w-full">
         
        
-        <div className="font-dm-sans text-center md:text-left">
-          <h2 className="text-[30px] sm:text-3xl md:text-4xl font-bold text-gray-800 xl:text-[56px]">
+        <div className=" text-center md:text-left">
+          <h2 className="font-dm-serif text-[30px] sm:text-3xl md:text-4xl font-bold text-gray-800 xl:text-[56px]">
             Subscribe to Wrapcare
           </h2>
           <p className="mt-8 text-base text-[#E0268E] font-semibold sm:text-lg md:text-xl xl:text-[24px]">

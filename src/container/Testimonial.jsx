@@ -12,7 +12,7 @@ const TestimonialSlider = () => {
 
   return (
     <div className="bg-pink-100  flex flex-col items-center justify-center  py-12">
-      <h2 className="font-dm-sans text-[38px] font-bold mb-10 text-center xl:text-[64px]">Customers Talk</h2>
+      <h2 className="font-dm-serif text-[38px] font-bold mb-10 text-center xl:text-[64px]">Customers Talk</h2>
 
       <div className="w-full w-70% relative sm:w-[85%] lg:w-[70%] ">
         <div>

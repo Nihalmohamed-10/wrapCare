@@ -21,7 +21,7 @@ function EmpoweringWomen() {
       </motion.div>
       <div className=" flex flex-col pl-8 pr-8  gap-5 text-center w-full mx-auto sm:text-start lg:w-[400px] xl:w-[510px]  ">
         <div>
-          <p className="hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[28px]">
+          <p className="font-dm-serif hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[28px]">
             Wet Tissue
           </p>
           <p className="text-[#747474] text-[16px] xl:text-[18px]">
@@ -29,7 +29,7 @@ function EmpoweringWomen() {
           </p>
         </div>
         <div>
-          <p className="hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]">
+          <p className="font-dm-serif hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]">
             Disposal Cover
           </p>
           <p className="text-[#747474] text-[16px] xl:text-[18px]">
@@ -37,7 +37,7 @@ function EmpoweringWomen() {
           </p>
         </div>
         <div>
-          <p className="hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]">
+          <p className="font-dm-serif hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]">
             Dry Tissue
           </p>
           <p className="text-[#747474] text-[16px] xl:text-[18px]">
@@ -45,7 +45,7 @@ function EmpoweringWomen() {
           </p>
         </div>
         <div>
-          <p className="hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]">
+          <p className="font-dm-serif hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] xl:text-[31px]">
             Soap Solution
           </p>
           <p className="text-[#747474] text-[16px] xl:text-[18px]">
@@ -69,7 +69,7 @@ function EmpoweringWomen() {
       </div> */}
       <div className="text-center pl-8 pr-8  flex flex-col gap-9 sm:w-[85%] lg:w-[800px] xl:text-start xl:pl-0 xl:pr-0 xl:w-[827px]">
         <div className="flex flex-col gap-10">
-          <p className="hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] lg:text-start xl:text-[31px]">
+          <p className="font-dm-serif hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] lg:text-start xl:text-[31px]">
             Empowering Women with Hygiene Essentials, Right to Your Door
           </p>
           <li className="text-[16px] text-[#747474] xl:text-[16px]">
