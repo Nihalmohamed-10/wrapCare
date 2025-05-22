@@ -17,7 +17,7 @@ const Spotlight = () => {
           confidence and well-being—anytime she needs it.
         </p>
         <div className="sm:w-full sm:text-start">
-          <button className="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full transition duration-300 sm:w-[300px] sm:mx-0 lg:w-[150px] ">
+          <button className="w-full cursor-pointer bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full transition duration-300 sm:w-[300px] sm:mx-0 lg:w-[150px] ">
             Order Here
           </button>
         </div>

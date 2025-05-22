@@ -67,7 +67,10 @@ const Navbar = () => {
         isSticky ? "fixed top-0 left-0 shadow-md" : "relative"
       }`}
     >
-      <div>
+      <div
+      onClick={scrollToHomeSection}
+      className="cursor-pointer"
+      >
         <img src={newLogo} alt="logoimg" className="h-15 w-auto" />
       </div>
 
