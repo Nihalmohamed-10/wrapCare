@@ -44,9 +44,9 @@ function EmpoweringWomen() {
         <div className='w-full hidden xl:block 2xl:w-[67%]'>
             <img src={kit} alt="kitImg" />
         </div>
-        <div className='pl-8 pr-8  flex flex-col gap-9 sm:w-[85%] lg:w-[800px] xl:pl-0 xl:pr-0 xl:w-[827px]'>
+        <div className='text-center pl-8 pr-8  flex flex-col gap-9 sm:w-[85%] lg:w-[800px] xl:pl-0 xl:pr-0 xl:w-[827px]'>
             <div className='flex flex-col gap-10'>
-                <p className='hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] text-start xl:text-[31px]'>
+                <p className='hover:text-[#E0268E] transition-colors duration-1000 ease-in-out font-dm-sans text-[24px] lg:text-start xl:text-[31px]'>
                     Empowering Women with Hygiene Essentials, Right to Your Door
                 </p>
                 <li className='text-[16px] text-[#747474] xl:text-[16px]'>

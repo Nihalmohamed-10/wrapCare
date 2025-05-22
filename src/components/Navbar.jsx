@@ -8,6 +8,7 @@ import {
 import newLogo from "../assets/images/newLogo.png";
 import { useState, useEffect } from "react";
 
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
