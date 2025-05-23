@@ -35,9 +35,9 @@ function CuratedEssential() {
           Curated Essentials for Her Comfort
         </motion.p>
       </div>
-      <div className="flex flex-col items-center justify-evenly mt-12 md:mt-[85px] gap-10 md:flex-row md:flex-wrap xl:pl-[120px] xl:pr-[120px] xl:mt-0">
+      <div className="flex flex-col items-center justify-center p-[1rem] mt-12 md:mt-[85px] gap-10 md:flex-row md:flex-wrap xl:mt-0">
         {aboutData.map((item) => (
-          <div key={item.id} className={clsx(item.id % 2 === 0 && "2xl:pt-35")}>
+          <div key={item.id} className={clsx(item.id % 2 === 0 && "xl:pt-35")}>
             <CurvyDivs
               title={item.title}
               img={item.img}
