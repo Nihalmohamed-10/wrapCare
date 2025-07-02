@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import CurvyDivs from "../components/CurvyDivs";
-import aboutData from "../../src/constants/index";
+import {aboutData} from "../constants/index";
 import { motion } from "framer-motion";
 
 function CuratedEssential() {

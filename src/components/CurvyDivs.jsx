@@ -12,7 +12,7 @@ function CurvyDivs({ title, img, isEven, reverseAt2XL, num }) {
           <div className="absolute inset-0 bg-[#E0268E] transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top z-0" />
     
           <div className="relative z-10 text-center mt-[44px]">
-            <p className="text-[#000000] group-hover:text-white text-[40px] transition-colors duration-300">
+            <p className="font-dm-serif text-[#000000] group-hover:text-white text-[40px] transition-colors duration-300">
               {title}
             </p>
           </div>

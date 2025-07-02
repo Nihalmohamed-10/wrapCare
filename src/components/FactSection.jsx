@@ -12,7 +12,7 @@ function FactsSection({ description }) {
           </h2>
         </div>
 
-        <div className="w-full pl-[30px] pr-[30px] text-start text-[#3F3C3C] text-[20px] sm:w-[90%] sm:mx-auto md:w-[500px]  md:text-left lg:text-[18px] lg:leading-[40px]">
+        <div className=" w-full pl-[30px] pr-[30px] text-start text-[#3F3C3C] text-[20px] sm:w-[90%] sm:mx-auto md:w-[500px]  md:text-left lg:text-[18px] lg:leading-[40px]">
           <p>{description}</p>
         </div>
 

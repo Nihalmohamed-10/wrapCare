@@ -1,5 +1,6 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaVimeoV, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
+
 import newLogo from "../assets/images/footerLogo.png";
 import { useEffect } from "react";
 const Footer = () => {
@@ -75,48 +76,12 @@ const Footer = () => {
           </li>
         </ul>
 
-        {/* <ul className="flex flex-col flex-wrap gap-10 text-start items-center justify-center text-[16px] font-medium lg:flex-row">
-          <li 
-          onClick={scrollToHomeSection}
-          >
-            <a href="" className="hover:text-pink-600">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="" className="hover:text-pink-600" 
-            onClick={scrollToCuratedEssential}
-            >
-
-              Features
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-pink-600">
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-pink-600">
-              F&Q
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-pink-600">
-              Contact
-            </a>
-          </li>
-        </ul> */}
-
         <div className="flex gap-12 text-xl">
           <a href="#" className="hover:text-pink-600">
             <FaFacebookF />
           </a>
-          <a href="#" className="hover:text-pink-600">
-            <FaTwitter />
-          </a>
-          <a href="#" className="hover:text-pink-600">
-            <FaVimeoV />
+          <a href="https://www.instagram.com/wrap_care?igsh=ZTk2dndoa3doOWE3" className="hover:text-pink-600">
+            <FaInstagram />
           </a>
           <a href="#" className="hover:text-pink-600">
             <FaYoutube />

@@ -6,12 +6,44 @@ import {
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { IoMdClose } from "react-icons/io";
+import { FaPlus } from "react-icons/fa6";
 
 const faqs = [
+  // {
+  //   question: "Can I use the Landify for a client’s product?",
+  //   answer:
+  //     "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem.",
+  // },
   {
-    question: "Can I use the Landify for a client’s product?",
+    question: "What is the story behind WRAPCARE?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem.",
+      "We are an engineering couple who travel frequently, and during our journeys, we noticed many women struggling to manage their menstrual hygiene properly while on the go. Seeing this challenge inspired us to create WRAPCARE—a thoughtfully designed menstrual care kit that helps women maintain complete hygiene, comfort, and confidence during their periods, no matter where they are. WRAPCARE is our way of providing a reliable, convenient, and eco-friendly solution born from real-life experiences and genuine care.",
+  },
+  {
+    question: "What is included in the MINI COMBO PERIOD PACK?",
+    answer:
+      "It includes a bamboo pad, sanitizer, homemade hand wash, dry tissue, coin tissue, disposal cover, perfume tissue, homemade chocolate, period tracker card, blood color tracker card, and exercise card.",
+  },
+  {
+    question: "Who is this pack for?",
+    answer:
+      " It is designed for school and college students, working women, travelers — anyone who wants safe, hygienic, and confident period care on the go.",
+  },
+  {
+    question: "Are the products safe?",
+    answer:
+      "Yes! We use safe, hygienic materials. Our soap solution, and chocolate are homemade with care and quality.",
+  },
+  {
+    question: " Is it eco-friendly?",
+    answer:
+      "Yes, we include bamboo pads and mindful, reusable elements to reduce waste.",
+  },
+  {
+    question: "How do I order?",
+    answer:
+      "You can order directly from our website or contact us through our WhatsApp/Instagram for details.",
   },
 ];
 
@@ -30,7 +62,7 @@ export default function FaqQuestion() {
           expanded={expanded === index}
           onChange={handleChange(index)}
           sx={{
-            backgroundColor: "transparent", 
+            backgroundColor: "transparent",
             borderBottom: "1px solid #E0268E80",
             boxShadow: "none",
             "&:before": { display: "none" },
@@ -40,21 +72,25 @@ export default function FaqQuestion() {
           <AccordionSummary
             expandIcon={
               expanded === index ? (
-                <span style={{ fontSize: 20 }}>❌</span>
+                <span className="text-pink-500 text-[30px]">
+                  <IoMdClose />
+                </span>
               ) : (
-                <span style={{ fontSize: 20 }}>➕</span>
+                <span style={{ fontSize: 20 }}>
+                  <FaPlus />
+                </span>
               )
             }
             aria-controls={`panel${index}-content`}
             id={`panel${index}-header`}
             sx={{
               paddingX: 0,
-              backgroundColor: "transparent", 
+              backgroundColor: "transparent",
             }}
           >
             <Typography
               sx={{
-                fontFamily: "DM Sans, sans-serif-text",
+                // fontFamily: "DM Sans, sans-serif-text",
                 fontWeight: 600,
                 fontSize: {
                   xs: "18px",
@@ -71,7 +107,7 @@ export default function FaqQuestion() {
             <Typography
               sx={{
                 paddingX: 0,
-                backgroundColor: "transparent", // optional, for safety
+                backgroundColor: "transparent",
               }}
             >
               {faq.answer}

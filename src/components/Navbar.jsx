@@ -63,7 +63,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full bg-[#FBA6DE] px-6 lg:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
+      className={`w-full bg-[#e0268e] px-6 lg:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
         isSticky ? "fixed top-0 left-0 shadow-md" : "relative"
       }`}
     >
@@ -115,7 +115,7 @@ const Navbar = () => {
 
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-[#FBA6DE] bg-opacity-95 backdrop-blur-sm flex flex-col items-center justify-center z-40"
+          className="fixed inset-0 bg-[#e0268e] bg-opacity-95 backdrop-blur-sm flex flex-col items-center justify-center z-40"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <ul className="flex flex-col gap-10 text-white font-semibold text-2xl text-center">

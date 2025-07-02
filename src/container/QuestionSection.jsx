@@ -22,9 +22,9 @@ function QuestionSection() {
 
       <div className='flex flex-col xl:gap-5 w-full md:w-[full] space-y-4'>
         <FaqQuestion />
+        {/* <FaqQuestion />
         <FaqQuestion />
-        <FaqQuestion />
-        <FaqQuestion />
+        <FaqQuestion /> */}
       </div>
     </div>
   );
