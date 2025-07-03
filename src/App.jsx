@@ -7,7 +7,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 300); 
+    const timer = setTimeout(() => setLoading(false), 1000); 
     return () => clearTimeout(timer);
   }, []);
 
