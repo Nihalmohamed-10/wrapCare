@@ -79,7 +79,7 @@ const Footer = () => {
         </ul>
 
         <div className="flex gap-12 text-xl">
-          <a href="#" className="hover:text-pink-600">
+          <a href="https://www.facebook.com/share/1feRLvJ5Bf/" className="hover:text-pink-600">
             <FaFacebookF />
           </a>
           <a
@@ -88,7 +88,7 @@ const Footer = () => {
           >
             <FaInstagram />
           </a>
-          <a href="#" className="hover:text-pink-600">
+          <a href="https://youtube.com/@wrapcare?si=nVBTTa0d8JnOhNpU" className="hover:text-pink-600">
             <FaYoutube />
           </a>
         </div>

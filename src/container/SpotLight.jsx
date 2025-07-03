@@ -1,7 +1,7 @@
 import React from "react";
 import spotImng from "../assets/images/spotImg.png";
 import { motion } from "framer-motion";
-import banner from "../assets/images/wc_banner.png";
+import banner from "../assets/images/wc_banner1.png";
 const Spotlight = () => {
   const slideUp = {
     hidden: { opacity: 0, y: 60 },

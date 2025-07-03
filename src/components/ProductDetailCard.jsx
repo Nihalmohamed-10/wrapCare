@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ProductDetailCard({ title, content, price, oldPrice, weight }) {
+function ProductDetailCard({ price, oldPrice }) {
   const [quantity, setQuantity] = useState(1);
 
   const increment = () => setQuantity((prev) => prev + 1);
@@ -9,9 +9,11 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
   };
 
   const handleWhatsAppRedirect = () => {
-    const phoneNumber = "917025966234"; // Replace with your WhatsApp number (no +)
-    const message = `Hi! I want to order Wrapcare with quantity: ${quantity}`;
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const phoneNumber = "918606050922";
+    const message = `Hey! 👋 I'm interested in ordering your period care kit. I'd like to place an order for ${quantity} unit(s). Could you please assist me with the next steps? 😊`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(url, "_blank");
   };
 
@@ -59,17 +61,6 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
             </span>
           </div>
         </div>
-
-        {/* Uncomment this section if weight display is needed */}
-        {/* 
-        <div className="mt-[20px] mb-4 flex justify-between gap-14 items-center lg:pl-[20px]  lg:mt-[20px] lg:justify-start lg:w-[90%]">
-          <p className="text-[20px] text-[#747474]">Weight:</p>
-          <span className="inline-flex items-center justify-center bg-[#EBACCD] text-[#444444] font-semibold w-[76px] h-[52px] rounded-full text-sm">
-            {weight}
-          </span>
-        </div>
-        */}
-
         <div className="mt-[20px] mb-6 flex justify-between gap-6 items-center lg:pl-[20px] lg:mt-[20px] lg:justify-start lg:w-[90%]">
           <p className="text-[20px] text-[#747474]">Quantity:</p>
           <div className="flex gap-4 items-center border border-[#E0268E] rounded-full px-4 py-1">
