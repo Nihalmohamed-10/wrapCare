@@ -18,7 +18,7 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
         </p>
 
         <div className="mt-[10px] flex flex-col gap-16  pl-8 pr-8 pt-5 text-center w-full mx-auto lg:pl-2 lg:pr-2 xl:text-start lg:w-[400px] xl:w-[480px] 2xl:mx-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4 text-start ml-15 sm:ml-0 text-[16px] font-[500]  leading-relaxed tracking-wide lg:text-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4 text-start ml-12 sm:ml-0 text-[16px] font-[500]  leading-relaxed tracking-wide lg:text-start">
             <div className="space-y-4 ">
               <p>🌸 Bamboo Pads</p>
               <p>🌸 Sanitizer</p>

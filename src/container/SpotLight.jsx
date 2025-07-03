@@ -40,7 +40,7 @@ const Spotlight = () => {
           variants={slideUp}
           initial="hidden"
           animate="visible"
-          className="font-dm-serif text-[#e0268e] sm-mx-auto text-[52px] sm:text-4xl sm:text-start sm:w-[77%] font-[400] leading-tight mb-6 lg:w-[59%] lg:font-extrabold xl:text-[44px] xl:w-[500px] 2xl:text-[54px] 2xl:w-[720px] 2xl:font-normaly"
+          className="mt-15 font-dm-serif text-[#e0268e] sm-mx-auto text-[52px] sm:text-4xl sm:text-start sm:w-[77%] font-[400] leading-tight mb-6 lg:w-[59%] lg:font-extrabold xl:text-[44px] xl:w-[500px] 2xl:text-[54px] 2xl:w-[720px] 2xl:font-normaly"
         >
           {/* From Periods to Pampering—We’ve Got Her Covered */}
           Your Confidence Companion for Period Days.
@@ -53,7 +53,7 @@ const Spotlight = () => {
           variants={slideUp}
           initial="hidden"
           animate="visible"
-          className=" text-[16px]  leading-9 pt-[40px] pb-[40px] sm:text-start sm:w-[77%] sm:mx-0 sm:text-lg md:text-[20px] w-full md:w-[560px] mx-auto md:mx-0 mb-8 lg:w-[59%] xl:w-[600px] 2xl:w-[800px]"
+          className=" text-[16px]  leading-6 mb-2 sm:pb-[40px] sm:pt-[40px] sm:text-start sm:w-[77%] sm:mx-0 sm:text-lg md:text-[20px] w-full md:w-[560px] mx-auto md:mx-0 lg:w-[59%] xl:w-[600px] 2xl:w-[800px]"
         >
           Introducing the MINI COMBO PERIOD PACK — a thoughtfully designed
           menstrual hygiene kit created by an engineering couple, made to
