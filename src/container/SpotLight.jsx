@@ -29,7 +29,7 @@ const Spotlight = () => {
   return (
     <section
       id="home-section"
-      className="w-full h-[680px] md:h-[680px] bg-cover bg-center text-white flex items-center px-6  "
+      className="w-full h-[680px] md:h-[680px] lg:h-[770px] bg-cover bg-center text-white flex items-center px-6  "
       style={{ backgroundImage: `url(${banner})` }}
     >
       <div className=" ml-0 md:pl-[50px] text-center xl:pl-[120px] xl:ml-0">
@@ -53,7 +53,7 @@ const Spotlight = () => {
           variants={slideUp}
           initial="hidden"
           animate="visible"
-          className=" text-[16px]  leading-6 mb-2 sm:mx-auto sm:leading-9 sm:pb-[40px] sm:pt-[40px] sm:text-center sm:w-[77%] sm:mx-0 sm:text-lg md:text-[20px] w-full md:text-start  md:w-[560px] mx-auto md:mx-0 lg:w-[59%] xl:w-[600px] 2xl:w-[800px]"
+          className=" text-[16px]  leading-6 mb-2 sm:mx-auto sm:leading-9 sm:pb-[40px] sm:pt-[40px] sm:text-center sm:w-[77%]  sm:text-lg md:text-[20px] w-full md:text-start  md:w-[560px] mx-auto md:mx-0 lg:w-[59%] xl:w-[600px] 2xl:w-[800px]"
         >
           Introducing the MINI COMBO PERIOD PACK — a thoughtfully designed
           menstrual hygiene kit created by an engineering couple, made to

@@ -11,14 +11,14 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
   return (
     <div className=" w-full lg:w-1/2 bg-[#FDE6F6] h-auto pl-[96px] pr-[96px] flex justify-center p-8 sm:py-20 lg:pl-[25px] lg:pr-[25px] xl:pl-[80px] group hover:bg-[#FDE6F6] transition-colors duration-[4000ms] ease-in-out lg:bg-[#F4F4F5]">
       <div className="mt-[10px] w-[563px] lg:w-full lg:pl-[20px] lg:pr-[20px]">
-        <p className="font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] sm:w-[400px] lg:w-[392px] lg:text-start lg:text-[22px] font-extrabold text-black xl:mx-0 xl:text-[26px] 2xl:w-[500px]">
+        <p className="font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] sm:w-[400px] md:w-[470px] lg:w-[378px] lg:text-start lg:text-[22px] font-extrabold text-black xl:mx-0 xl:text-[26px] 2xl:w-[500px]">
           She doesn’t ask for much. Just a little comfort during her hardest
           days. Introducing Wrapcare — your monthly period companion, made with
           love 💗
         </p>
 
         <div className="mt-[10px] flex flex-col gap-16  pl-8 pr-8 pt-5 text-center w-full mx-auto lg:pl-2 lg:pr-2 xl:text-start lg:w-[400px] xl:w-[480px] 2xl:mx-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4 text-start ml-12 sm:ml-0 text-[16px] font-[500]  leading-relaxed tracking-wide lg:text-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4 text-start ml-12 sm:ml-0 text-[16px] font-[500] md:w-[365px] md:mx-auto leading-relaxed tracking-wide lg:mx-0 lg:text-start">
             <div className="space-y-4 ">
               <p>🌸 Bamboo Pads</p>
               <p>🌸 Sanitizer</p>
@@ -37,7 +37,7 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
           </div>
         </div>
 
-        <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start lg:w-[392px] text-black xl:mx-0 xl:text-[26px]">
+        <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start lg:w-[378px] text-black xl:mx-0 xl:text-[26px]">
           All in one comforting pack, made just for her
         </p>
 
@@ -53,12 +53,12 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
           </div>
         </div>
 
-        <div className="mt-[20px] mb-4 flex justify-between gap-14 items-center lg:pl-[20px]  lg:mt-[20px] lg:justify-start lg:w-[90%]">
+        {/* <div className="mt-[20px] mb-4 flex justify-between gap-14 items-center lg:pl-[20px]  lg:mt-[20px] lg:justify-start lg:w-[90%]">
           <p className="text-[20px] text-[#747474]">Weight:</p>
           <span className="inline-flex items-center justify-center bg-[#EBACCD] text-[#444444] font-semibold w-[76px] h-[52px] rounded-full text-sm">
             {weight}
           </span>
-        </div>
+        </div> */}
 
         <div className="mt-[20px] mb-6 flex justify-between gap-6 items-center lg:pl-[20px]  lg:mt-[20px] lg:justify-start lg:w-[90%]">
           <p className="text-[20px] text-[#747474]">Quantity:</p>
@@ -78,7 +78,7 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
             ADD TO CART
           </button>
         </div>
-        <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start lg:w-[470px] text-black xl:mx-0 xl:text-[26px]">
+        <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start sm:w-[470px] lg:w-[378px] text-black xl:mx-0 xl:text-[26px]">
           Because her period deserves more than just products — ✨ It deserves
           care, warmth, and a wrap of love
         </p>
