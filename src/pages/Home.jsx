@@ -21,7 +21,7 @@ function Home() {
       <FactsSection description="From period essentials to soothing self-care items, every pack is a blend of practicality and pampering—perfect for daily use or special times when extra care is needed." />
       <FaqComponent />
       <FactsSection description="Each of our hygiene care packs is thoughtfully curated with safe, skin-friendly, and high-quality products designed to support women’s health and comfort." />
-      <TestimonialSlider/>
+      {/* <TestimonialSlider/> */}
       <SubscribeSection/>
       <WhatsAppChatButton/>
     </div>

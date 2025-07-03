@@ -1,5 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
 
 import newLogo from "../assets/images/footerLogo.png";
 import { useEffect } from "react";
@@ -80,7 +82,10 @@ const Footer = () => {
           <a href="#" className="hover:text-pink-600">
             <FaFacebookF />
           </a>
-          <a href="https://www.instagram.com/wrap_care?igsh=ZTk2dndoa3doOWE3" className="hover:text-pink-600">
+          <a
+            href="https://www.instagram.com/wrap_care?igsh=ZTk2dndoa3doOWE3"
+            className="hover:text-pink-600"
+          >
             <FaInstagram />
           </a>
           <a href="#" className="hover:text-pink-600">
@@ -89,11 +94,27 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-6 flex flex-col md:flex-row justify-between items-center text-[18px] gap-4 md:text-[16px] md:pr-10 md:pl-10">
-        <p>© 2022 ABC. All rights reserved.</p>
+      <div className="mt-6 flex flex-col md:flex-row justify-between items-center text-[18px] gap-4 md:text-[16px] md:px-10">
+        <div className="flex flex-col gap-1 text-center md:text-left">
+          <div className="flex items-center gap-2">
+            <PhoneIcon className="text-pink-600" />
+            <span>+91 98765 43210</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <EmailIcon className="text-pink-600" />
+            <span>support@wrapcare.com</span>
+          </div>
+          <div className="flex items-center gap-2 mt-1">
+            <span className="text-sm text-gray-600">
+              © 2025 Wrapcare. All rights reserved.
+            </span>
+          </div>
+        </div>
+
         <div>
           <img src={newLogo} alt="logoimg" className="h-10 w-auto" />
         </div>
+
         <div className="flex gap-6 text-[18px] md:text-[16px]">
           <a href="#" className="hover:text-pink-600">
             Terms of Service

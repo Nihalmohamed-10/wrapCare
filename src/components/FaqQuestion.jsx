@@ -97,7 +97,7 @@ export default function FaqQuestion() {
                   xl: "22px",
                 },
                 color: expanded === index ? "#E0268E" : "black",
-                width: { xs: "219px", lg: "490px" },
+                width: { xs: "219px", sm:"470px", lg: "470px" },
               }}
             >
               {faq.question}

@@ -4,7 +4,7 @@ function FactsSection({ description }) {
   return (
     <section className="  bg-[#FDE6F6]  w-full">
 
-      <div className="w-full  mx-auto flex flex-col lg:flex-row items-start md:items-center justify-between  lg:gap-8 lg:pt-25 lg:pb-25 lg:pr-[21px]">
+      <div className="w-full  mx-auto flex flex-col lg:flex-row items-start md:items-center justify-between  lg:gap-8 lg:pt-[25px] lg:pb-[25px] lg:pr-[21px]">
    
         <div className="w-full  relative mb-6 lg:border-b border-[#E0268E] lg:w-[50%]  ">
           <h2 className="font-dm-serif mx-auto text-[32px] text-[#E0268E33] text-center sm:text-[36px] font-semibold lg:text-end">

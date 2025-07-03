@@ -37,16 +37,18 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
           </div>
         </div>
 
-        <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start lg:w-[392px] font-extrabold text-black xl:mx-0 xl:text-[30px]">
+        <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start lg:w-[392px] text-black xl:mx-0 xl:text-[26px]">
           All in one comforting pack, made just for her
         </p>
 
         <div className="mt-[20px] mb-4 flex justify-between gap-14 items-center lg:mt-[20px] lg:pl-[20px] lg:justify-start lg:w-[90%]">
           <p className="text-[20px] text-[#747474]">Price:</p>
           <div className="flex flex-col">
-            <span className="text-[20px] text-[#747474]">{price}+ Free Shipping</span>
+            <span className="text-[20px] text-[#747474]">
+              {price}+ Free Shipping
+            </span>
             <span className="text-gray-400 line-through text-sm">
-              {oldPrice} 
+              {oldPrice}
             </span>
           </div>
         </div>
@@ -76,6 +78,10 @@ function ProductDetailCard({ title, content, price, oldPrice, weight }) {
             ADD TO CART
           </button>
         </div>
+        <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start lg:w-[470px] text-black xl:mx-0 xl:text-[26px]">
+          Because her period deserves more than just products — ✨ It deserves
+          care, warmth, and a wrap of love
+        </p>
       </div>
     </div>
   );

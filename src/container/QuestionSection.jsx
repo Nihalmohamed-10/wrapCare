@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import calender from "../assets/images/calender.png";
+import calender from "../assets/images/wrapCard2.jpg";
 import FaqQuestion from '../components/FaqQuestion';
 
 function QuestionSection() {
@@ -8,7 +8,7 @@ function QuestionSection() {
     <div
     id="fac-section"
     className='w-full bg-[#FDE6F6] px-4 pt-35 py-10 md:pt-[100px] md:pb-[100px] 
-      flex flex-col items-center md:items-start justify-between gap-8 lg:flex-row lg:items-center lg:justify-center lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px] '>
+      flex flex-col items-center md:items-start justify-between gap-8 lg:pt-[35px] lg:flex-row lg:items-center lg:justify-center lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px] '>
       
       <motion.div
         className='w-full px-10 md:w-full lg:w-full'
@@ -17,7 +17,7 @@ function QuestionSection() {
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <img src={calender} alt="img" className="w-full h-auto" />
+        <img src={calender} alt="img" className="w-full h-auto rounded-2xl" />
       </motion.div>
 
       <div className='flex flex-col xl:gap-5 w-full md:w-[full] space-y-4'>
