@@ -25,7 +25,12 @@ const Spotlight = () => {
       },
     },
   };
-
+  const scrollToProductSection = () => {
+    const element = document.getElementById("product-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section
       id="home-section"
@@ -62,10 +67,8 @@ const Spotlight = () => {
           for safe, hygienic, and confident periods on the go.
         </motion.p>
         <div className="sm:w-full sm:mx-auto sm:text-center md:text-start">
-          {/* <button className="w-full cursor-pointer bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full transition duration-300 sm:w-[300px] sm:mx-0 lg:w-[150px] ">
-            Order Here
-          </button> */}
           <motion.button
+            onClick={scrollToProductSection}
             variants={slideUp2}
             initial="hidden"
             animate="visible"

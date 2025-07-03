@@ -33,7 +33,7 @@ const SubscribeSection = () => {
             type="email"
             placeholder="Your email"
             required
-            className="w-full rounded-full px-6 py-3 outline-none text-base text-gray-800 bg-white pr-32 xl:px-5 xl:py-5"
+            className="w-full rounded-full px-6 py-3 outline-none text-base text-gray-800 bg-white sm:pr-32 xl:px-5 xl:py-5"
           />
           <button
             type="submit"
@@ -44,7 +44,7 @@ const SubscribeSection = () => {
         </form>
       </div>
 
-      {/* ✅ Modal */}
+  
       {isModalOpen && (
         <div className="fixed inset-0 bg-pink-600 bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-xl shadow-lg text-center max-w-sm w-full">
