@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function EmpoweringWomen() {
   return (
-    <div className="sm:pt-[50px] bg-[#FDE6F6]  pb-30 flex flex-col gap-5 sm:pl-20 sm:pr-20 md:flex-row xl:pl-[120px] xl:pr-[120px]">
+    <div className="sm:pt-[50px] bg-[#FDE6F6]  pb-30 flex flex-col gap-5 sm:pl-20 sm:pr-20 md:pl-10 md:pr-10 lg:pl-20 lg:pr-20 md:flex-row xl:pl-[120px] xl:pr-[120px]">
       {/* <div className='w-full xl:hidden md:w-[60%] md:mx-auto'>
             <img src={kit} alt="kitImg" />
         </div> */}
@@ -22,8 +22,8 @@ function EmpoweringWomen() {
           className="mt-20 w-[200px] mx-auto sm:w-[250px] "
         />
       </motion.div>
-      <div className="flex flex-col gap-16 pl-8 pr-8 md:pl-0 md:pr-0 xl:pl-8 xl:pr-8 text-center w-full mx-auto xl:text-start lg:w-[400px] xl:w-[610px]">
-        <div className="flex flex-col gap-10 text-start leading-relaxed tracking-wide text-[14px] lg:text-[16px] xl:text-[20px] font-[500]">
+      <div className="flex flex-col gap-16 pl-8 pr-8 md:pl-0 md:pr-0  xl:pl-8 xl:pr-8 text-center w-full mx-auto xl:text-start lg:w-[400px] xl:w-[610px]">
+        <div className="flex flex-col gap-10 text-start leading-relaxed tracking-wide text-[16px] lg:text-[16px] xl:text-[20px] font-[500]">
           <div className="flex items-start gap-3">
             <div>
               <p className="text-xl">🌸</p>
@@ -91,7 +91,7 @@ function EmpoweringWomen() {
         </ul>
       </div> */}
       <motion.div
-        className="w-full hidden md:block md:mt-28 lg:mt-0 2xl:w-[67%]"
+        className="w-full hidden md:block md:mt-28 lg:mt-18 xl:mt-8 2xl:w-[67%]"
         initial={{ scale: 0.1, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true, amount: 0.4 }}
@@ -107,7 +107,7 @@ function EmpoweringWomen() {
         <img src={kit} alt="kitImg" />
       </div> */}
       <div className="flex flex-col gap-16 pl-8 pr-8 md:pl-0 md:pr-0 xl:pl-8 xl:pr-8 text-center w-full mx-auto xl:text-start lg:w-[400px] xl:w-[610px]">
-        <div className="flex flex-col gap-10 text-start leading-relaxed tracking-wide text-[14px] lg:text-[16px] xl:text-[20px] font-[500]">
+        <div className="flex flex-col gap-10 text-start leading-relaxed tracking-wide text-[16px] lg:text-[16px] xl:text-[20px] font-[500]">
           <div className="flex items-start gap-3">
             <div>
               <p className="text-xl">🌸</p>
