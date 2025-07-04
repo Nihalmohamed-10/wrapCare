@@ -34,7 +34,7 @@ const Spotlight = () => {
   return (
     <section
       id="home-section"
-      className="w-full h-[680px] md:h-[680px] lg:h-[770px] bg-cover bg-center text-white flex items-center px-6  "
+      className="w-full h-[720px] md:h-[680px] lg:h-[770px] bg-cover bg-center text-white flex items-center px-6  "
       style={{ backgroundImage: `url(${banner})` }}
     >
       <div className=" ml-0 md:pl-[50px] text-center xl:pl-[120px] xl:ml-0">

@@ -96,15 +96,15 @@ const Footer = () => {
 
       <div className="mt-6 flex flex-col md:flex-row justify-between items-center text-[18px] gap-4 md:text-[16px] md:px-10">
         <div className="flex flex-col gap-1 text-center md:text-left">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mx-auto md:mx-0">
             <PhoneIcon className="text-pink-600" />
             <span>+918606050922</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mx-auto md:mx-0">
             <EmailIcon className="text-pink-600" />
             <span>hello@wrapcare.in</span>
           </div>
-          <div className="flex items-center gap-2 mt-1">
+          <div className="flex items-center gap-2 mt-1 mx-auto md:mx-0">
             <span className="text-sm text-gray-600">
               © 2025 Wrapcare. All rights reserved.
             </span>

@@ -26,7 +26,7 @@ function ProductDetailCard({ price, oldPrice }) {
           love 💗
         </p>
 
-        <div className="mt-[10px] flex flex-col gap-16 pl-8 pr-8 pt-5 text-center w-full mx-auto lg:pl-2 lg:pr-2 xl:text-start lg:w-[400px] xl:w-[480px] 2xl:mx-0">
+        {/* <div className="mt-[10px] flex flex-col gap-16 pl-8 pr-8 pt-5 text-center w-full mx-auto lg:pl-2 lg:pr-2 xl:text-start lg:w-[400px] xl:w-[480px] 2xl:mx-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4 text-start ml-12 sm:ml-0 text-[16px] font-[500] md:w-[365px] md:mx-auto leading-relaxed tracking-wide lg:mx-0 lg:text-start">
             <div className="space-y-4">
               <p>🌸 Bamboo Pads</p>
@@ -44,10 +44,11 @@ function ProductDetailCard({ price, oldPrice }) {
               <p>🌸 Blood Colour Tracker - Card</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start lg:w-[378px] text-black xl:mx-0 xl:text-[26px]">
-          All in one comforting pack, made just for her
+          All in one comforting pack, made just for her. Because her period deserves more than just products — ✨ It deserves
+          care, warmth, and a wrap of love
         </p>
 
         <div className="mt-[20px] mb-4 flex justify-between gap-14 items-center lg:mt-[20px] lg:pl-[20px] lg:justify-start lg:w-[90%]">
@@ -74,7 +75,8 @@ function ProductDetailCard({ price, oldPrice }) {
           </div>
         </div>
 
-        <div className="lg:pl-[30px]">
+        {/* <div className="lg:pl-[30px]"> */}
+        <div className="lg:pl-[30px] flex justify-center md:justify-end">
           <button
             onClick={handleWhatsAppRedirect}
             className="w-full bg-[#FDE6F6] border border-[#E0268E] mt-[10px] pt-[17px] pb-[17px] px-[42px] text-[#c1005e] font-semibold rounded-full sm:w-[200px] lg:mt-[20px] sm:bg-[#E0268E] sm:text-[#FFFFFF] transition-colors duration-[2000ms] ease-in-out"
@@ -83,10 +85,10 @@ function ProductDetailCard({ price, oldPrice }) {
           </button>
         </div>
 
-        <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start sm:w-[470px] lg:w-[378px] text-black xl:mx-0 xl:text-[26px]">
+        {/* <p className="mt-[30px] font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] lg:text-start sm:w-[470px] lg:w-[378px] text-black xl:mx-0 xl:text-[26px]">
           Because her period deserves more than just products — ✨ It deserves
           care, warmth, and a wrap of love
-        </p>
+        </p> */}
       </div>
     </div>
   );
