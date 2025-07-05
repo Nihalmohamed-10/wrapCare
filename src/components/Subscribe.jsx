@@ -15,12 +15,12 @@ const SubscribeSection = () => {
 
   return (
     <div className="bg-[#FDE6F6] flex justify-center px-4 py-6 xl:pl-[120px] xl:pr-[120px]">
-      <div className="bg-[#F3D1E3] w-full rounded-2xl px-6 py-20 flex flex-col sm:w-[85%] lg:pl-[50px] lg:pr-[50px] lg:flex-row items-center justify-between gap-8 xl:w-full">
+      <div className="bg-[#e0268e] w-full rounded-2xl px-6 py-20 flex flex-col sm:w-[85%] lg:pl-[50px] lg:pr-[50px] lg:flex-row items-center justify-between gap-8 xl:w-full">
         <div className="text-center md:text-left">
-          <h2 className="font-dm-serif text-[30px] sm:text-3xl md:text-4xl font-bold text-gray-800 xl:text-[56px]">
+          <h2 className="font-dm-serif text-[30px] sm:text-3xl md:text-4xl font-bold text-[#FDE6F6] xl:text-[56px]">
             Subscribe to Wrapcare
           </h2>
-          <p className="font-dm-serif mt-8 text-base text-[#E0268E] font-semibold sm:text-lg md:text-xl xl:text-[24px]">
+          <p className="font-dm-serif mt-8 text-base text-[#FDE6F6] font-semibold sm:text-lg md:text-xl xl:text-[24px]">
             Get latest offers & news real-world
           </p>
         </div>

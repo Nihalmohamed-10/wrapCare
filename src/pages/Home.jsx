@@ -9,12 +9,14 @@ import TestimonialSlider from "../container/Testimonial";
 import SubscribeSection from "../components/Subscribe";
 import EmpoweringWomen from "../container/EmpoweringWomen";
 import WhatsAppChatButton from "../components/WhatsAppChaButton"
+import TravelKitSection from "../container/TravelKitSection";
 function Home() {
   return (
     <div>
       <Spotlight />
       <CuratedEssential />
       <FactsSection description="Each of our hygiene care packs is thoughtfully curated with safe, skin-friendly, and high-quality products designed to support women’s health and comfort." />
+      <TravelKitSection/>
       <EmpoweringWomen/>
       <SmartCare />
       <Product />

@@ -1,25 +1,31 @@
-import Ellipse from "../assets/images/Ellipse 3.png";
+import office from "../assets/images/office.jpg";
+import school from "../assets/images/school.jpg";
+import travel from "../assets/images/travel.jpg";
 
 export const aboutData = [
   {
     id: 1,
-    title: "Chocolate treat",
-    img: Ellipse,
+    title: "Working Woman",
+    img: office,
     num: "01",
+    para: "“When Duty Calls, Be Confident: WrapCare for Sudden Office Periods”"
   },
   {
     id: 2,
-    title: "Perfumed Tissue",
-    img: Ellipse,
+    title: "School Girl",
+    img: school,
     num: "02",
+    para: "“School Day Saver: The Reliable Period Kit for Students”"
   },
   {
     id: 3,
-    title: "Bamboo Menstrual",
-    img: Ellipse,
+    title: "Traveling Woman",
+    img: travel,
     num: "03",
-  },
+    para: "“Because Periods Don’t Take Holidays: WrapCare for On-the-Go Needs”"
+  }
 ];
+
 
 
 

@@ -76,7 +76,7 @@ function ProductDetailCard({ price, oldPrice }) {
         </div>
 
         {/* <div className="lg:pl-[30px]"> */}
-        <div className="lg:pl-[30px] flex justify-center md:justify-end">
+        <div className="lg:pl-[30px] flex justify-center md:justify-start">
           <button
             onClick={handleWhatsAppRedirect}
             className="w-full bg-[#FDE6F6] border border-[#E0268E] mt-[10px] pt-[17px] pb-[17px] px-[42px] text-[#c1005e] font-semibold rounded-full sm:w-[200px] lg:mt-[20px] sm:bg-[#E0268E] sm:text-[#FFFFFF] transition-colors duration-[2000ms] ease-in-out"
