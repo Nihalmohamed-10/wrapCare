@@ -21,14 +21,13 @@ function CurvyDivs({ title, img, para }) {
     <div
       onClick={handleClick}
       className={`group relative flex flex-col items-center justify-between 
-                 bg-[#E0268E] p-8 pt-[44px] pb-10 w-[350px] h-[500px] 
+                 bg-[#ebaccd] p-8 pt-[44px] pb-10 w-[350px] h-[500px] 
                  lg:w-[400px] lg:h-[650px] text-white overflow-hidden 
                  rounded-3xl shadow-lg transition-all duration-300 
                  cursor-pointer ${active ? "shadow-2xl" : ""}`}
     >
-      {/* Background */}
       <div
-        className={`absolute inset-0 bg-[#FBA6DE] origin-top z-0 
+        className={`absolute inset-0 bg-[#f4f4f5] origin-top z-0 
           transition-transform duration-500
           ${active ? "scale-y-100" : "scale-y-0"} 
           lg:scale-y-0 lg:group-hover:scale-y-100`}
@@ -39,7 +38,7 @@ function CurvyDivs({ title, img, para }) {
         <p
           className={`font-dm-serif text-3xl font-bold transition-colors duration-300 
           ${active ? "text-black" : "text-[#f4f4f5]"} 
-          lg:text-[#f4f4f5] lg:group-hover:text-black`}
+          lg:text-[#2e3532] lg:group-hover:text-[#e0268e]`}
         >
           {title}
         </p>
@@ -59,7 +58,7 @@ function CurvyDivs({ title, img, para }) {
         <p
           className={`font-mona text-[16px] font-medium transition-colors duration-300 
           ${active ? "text-black" : "text-[#f4f4f5]"} 
-          lg:text-[#f4f4f5] lg:group-hover:text-black`}
+          lg:text-[#2e3532] lg:group-hover:text-[#e0268e]`}
         >
           {para}
         </p>

@@ -19,14 +19,14 @@ function CuratedEssential() {
   return (
     <div
       id="curated-essential"
-      className="bg-[#FDE6F6] pt-[60px] md:pt-[100px] pb-[60px] px-4 md:w-full"
+      className="bg-[#E0268E] pt-[60px] md:pt-[100px] pb-[60px] px-4 md:w-full"
     >
       <div className="text-center mx-auto max-w-2xl px-2">
         <motion.p
           variants={slideUp}
           initial="hidden"
           animate="visible"
-          className="font-dm-serif text-3xl sm:text-4xl sm:w-[77%] sm:mx-auto md:text-[60px] leading-snug md:leading-[80px] md:w-full font-medium"
+          className="font-dm-serif text-3xl text-[#f4f4f5] sm:text-4xl sm:w-[77%] sm:mx-auto md:text-[60px] leading-snug md:leading-[80px] md:w-full font-medium"
         >
           Be Ready, Anywhere. Anytime.
         </motion.p>

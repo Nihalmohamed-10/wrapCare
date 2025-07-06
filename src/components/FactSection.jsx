@@ -4,7 +4,7 @@ function FactsSection({ description, isDark }) {
   return (
     <section
       className={`${
-        isDark ? "bg-[#E0268E] pt-10 text-white" : "bg-[#FDE6F6] pt-10 text-[#3F3C3C]"
+        isDark ? "bg-[#E0268E] pt-10 text-white" : "bg-[#f4f4f5] pt-10 text-[#3F3C3C]"
       } w-full`}
     >
       <div className="w-full mx-auto flex flex-col lg:flex-row items-start md:items-center justify-between lg:gap-8 lg:pt-[25px] lg:pb-[25px] lg:pr-[21px]">
