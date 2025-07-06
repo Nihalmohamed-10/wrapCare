@@ -1,19 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-function CurvyDivs({ title, img, para, num }) {
+function CurvyDivs({ title, img, para }) {
+  const [active, setActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < 768);
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  const handleClick = () => {
+    if (isMobile) {
+      setActive((prev) => !prev);
+    }
+  };
+
   return (
     <div
-      className="group relative flex flex-col items-center justify-between 
+      onClick={handleClick}
+      className={`group relative flex flex-col items-center justify-between 
                  bg-[#E0268E] p-8 pt-[44px] pb-10 w-[350px] h-[500px] 
                  lg:w-[400px] lg:h-[650px] text-white overflow-hidden 
-                 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl"
+                 rounded-3xl shadow-lg transition-all duration-300 
+                 cursor-pointer ${active ? "shadow-2xl" : ""}`}
     >
-      {/* Background layer - always visible on mobile, hover-activated on desktop */}
-      <div className="absolute inset-0 bg-[#FBA6DE] scale-y-100 lg:scale-y-0 lg:group-hover:scale-y-100 transition-transform duration-500 origin-top z-0" />
+      {/* Background */}
+      <div
+        className={`absolute inset-0 bg-[#FBA6DE] origin-top z-0 
+          transition-transform duration-500
+          ${active ? "scale-y-100" : "scale-y-0"} 
+          lg:scale-y-0 lg:group-hover:scale-y-100`}
+      />
 
       {/* Title */}
       <div className="relative z-10 text-center mb-4">
-        <p className="font-dm-serif text-[#000000] lg:text-[#f4f4f5] lg:group-hover:text-[#000000] text-3xl font-bold transition-colors duration-300">
+        <p
+          className={`font-dm-serif text-3xl font-bold transition-colors duration-300 
+          ${active ? "text-black" : "text-[#f4f4f5]"} 
+          lg:text-[#f4f4f5] lg:group-hover:text-black`}
+        >
           {title}
         </p>
       </div>
@@ -29,7 +56,11 @@ function CurvyDivs({ title, img, para, num }) {
 
       {/* Paragraph */}
       <div className="relative z-10 text-center px-3">
-        <p className="font-mona text-[#000000] lg:text-[#f4f4f5] lg:group-hover:text-[#000000] text-[16px] font-medium transition-colors duration-300">
+        <p
+          className={`font-mona text-[16px] font-medium transition-colors duration-300 
+          ${active ? "text-black" : "text-[#f4f4f5]"} 
+          lg:text-[#f4f4f5] lg:group-hover:text-black`}
+        >
           {para}
         </p>
       </div>
@@ -38,6 +69,8 @@ function CurvyDivs({ title, img, para, num }) {
 }
 
 export default CurvyDivs;
+
+
 
 // import React from "react";
 
