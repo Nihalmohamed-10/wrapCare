@@ -72,7 +72,7 @@ const Spotlight = () => {
             variants={slideUp2}
             initial="hidden"
             animate="visible"
-            className=" w-full cursor-pointer bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full transition duration-300 sm:w-[300px] sm:mx-0 lg:w-[150px] "
+            className=" w-full cursor-pointer bg-[#e0268e] hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full transition duration-300 sm:w-[300px] sm:mx-0 lg:w-[150px] "
           >
             Order Here
           </motion.button>

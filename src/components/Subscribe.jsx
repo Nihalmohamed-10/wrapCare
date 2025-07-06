@@ -20,7 +20,7 @@ const SubscribeSection = () => {
           <h2 className="font-dm-serif text-[30px] sm:text-3xl md:text-4xl font-bold text-[#FDE6F6] xl:text-[56px]">
             Subscribe to Wrapcare
           </h2>
-          <p className="font-dm-serif mt-8 text-base text-[#FDE6F6] font-semibold sm:text-lg md:text-xl xl:text-[24px]">
+          <p className="font-mona mt-8 text-base text-[#FDE6F6] font-semibold sm:text-lg md:text-xl xl:text-[24px]">
             Get latest offers & news real-world
           </p>
         </div>

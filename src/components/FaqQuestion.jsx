@@ -55,7 +55,7 @@ export default function FaqQuestion() {
   };
 
   return (
-    <div className=" p-4 space-y-6">
+    <div className=" p-4 sm:pl-[45px] sm:pr-[45px] lg:pl-[20px] lg:pr-[20px] space-y-6">
       {faqs.map((faq, index) => (
         <Accordion
           key={index}

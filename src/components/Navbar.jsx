@@ -62,7 +62,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`font-mona w-full bg-[#e0268e] px-6 lg:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
+      className={`font-mona w-full bg-[#e0268e] px-6 lg:px-[60px] xl:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
         isSticky ? "fixed top-0 left-0 shadow-md" : "relative"
       }`}
     >
