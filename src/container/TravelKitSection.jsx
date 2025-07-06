@@ -68,11 +68,11 @@ const TravelKitSection = () => {
             initial={{ opacity: 0, rotate: -10 }}
             whileInView={{
               opacity: 1,
-              rotate: [-8, 6, -4, 2, 0], // swing effect
+              rotate: [-6, 4, -3, 2, 0], // swing effect
             }}
             viewport={{ once: true }}
             transition={{
-              duration: 2,
+              duration: 3.5, 
               ease: "easeOut",
             }}
             style={{ transformOrigin: "top center" }} // swing from top center

@@ -21,11 +21,11 @@ function ProductDetailCard({ price, oldPrice }) {
   return (
     <div className="w-full lg:w-1/2 bg-[#FDE6F6] h-auto pl-[96px] pr-[96px] flex justify-center p-8 sm:py-20 lg:pl-[25px] lg:pr-[25px] xl:pl-[80px] group hover:bg-[#FDE6F6] transition-colors duration-[4000ms] ease-in-out lg:bg-[#F4F4F5]">
       <div className="mt-[10px] w-[563px] lg:w-full lg:pl-[20px] lg:pr-[20px]">
-        <p className="font-dm-serif sm:mx-auto text-center text-[20px] w-[320px] sm:w-[430px] md:w-[430px] md:text-[30px] lg:w-[378px] lg:text-start lg:text-[22px] font-extrabold text-[#E0268E] xl:mx-0 xl:text-[28px] 2xl:w-[500px]">
+        <p className="font-dm-serif sm:mx-auto text-center text-[24px] w-[320px] sm:w-[430px] md:w-[430px] md:text-[30px] lg:w-[378px] lg:text-start lg:text-[22px] font-extrabold text-[#E0268E] xl:mx-0 xl:text-[28px] 2xl:w-[500px]">
           Stay ready anywhere—
         </p>
 
-        <p className="mt-[30px] font-mona sm:mx-auto text-center text-[20px] w-[320px] sm:w-[430px] md:text-[18px] lg:text-start lg:w-[400px] xl:w-[450px] text-black xl:mx-0 xl:text-[20px] 2xl:w-[500px]">
+        <p className="mt-[30px] font-mona sm:mx-auto text-center text-[18px] w-[320px] sm:w-[430px] md:text-[18px] lg:text-start lg:w-[400px] xl:w-[450px] text-black xl:mx-0 xl:text-[20px] 2xl:w-[500px]">
           All-in-one pack—your essential partner for comfort, confidence, and
           complete peace of mind on the go. Whether you’re traveling, working
           long hours, or heading to class, WrapCare ensures you’re always
