@@ -2,11 +2,11 @@ import React from "react";
 import kit from "../assets/images/wrapProduct1.png";
 import rash from "../assets/images/rashFree.png";
 import { motion } from "framer-motion";
-import logo from "../assets/images/wcareLogo.png";
+import logo from "../assets/images/newLogo.png";
 
 function EmpoweringWomen() {
   return (
-    <div className="sm:pt-[50px] bg-[#e0268e]  pb-30 flex flex-col gap-5 sm:pl-20 sm:pr-20 md:pt-20 md:pl-10 md:pr-10 lg:pl-20 lg:pr-20 md:flex-row xl:pl-[120px] xl:pr-[120px]">
+    <div className="sm:pt-[50px] bg-[#e0268e]  pb-15 md:pb-20 flex flex-col gap-5 sm:pl-20 sm:pr-20 md:pt-20 md:pl-10 md:pr-10 lg:pl-20 lg:pr-20 md:flex-row xl:pl-[120px] xl:pr-[120px]">
       {/* <div className='w-full xl:hidden md:w-[60%] md:mx-auto'>
             <img src={kit} alt="kitImg" />
         </div> */}
@@ -23,7 +23,7 @@ function EmpoweringWomen() {
           className="mt-5 w-[300px] sm:w-[400px] mx-auto "
         />
       </motion.div>
-      <div className="flex flex-col gap-16 pl-8 pr-8 md:pl-0 md:pr-0  xl:pl-8 xl:pr-8 text-center w-full mx-auto xl:text-start lg:w-[700px] xl:w-[700px]">
+      <div className="font-mona flex flex-col gap-16 pl-8 pr-8 md:pl-0 md:pr-0  xl:pl-8 xl:pr-8 text-center w-full mx-auto xl:text-start lg:w-[700px] xl:w-[700px]">
         <div className="flex flex-col gap-5 2xl:gap-13 text-start leading-relaxed tracking-wide text-[16px] font-[500]">
           {[
             "Bamboo Pad — Soft, eco-friendly, gentle protection",
@@ -39,11 +39,13 @@ function EmpoweringWomen() {
                 key={index}
                 className="flex items-start gap-3 sm:pl-17 md:pl-0"
               >
-                <div className="pt-1 w-[30px] sm:w-[45px]">
+                {/* <div className="pt-1 w-[30px] sm:w-[45px]"> */}
+                <div className="pt-1 w-[35px] sm:w-[40px] xl:w-[50px]">
                   <img
                     src={logo}
                     alt="Flower Icon"
-                    className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] xl:w-[28px] xl:h-[28px]"
+                    // className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] xl:w-[28px] xl:h-[28px]"
+                    className="w-[35px] h-[20px] sm:w-[40px] sm:h-[24px] xl:w-[50px] xl:h-[28px]"
                   />
                 </div>
                 <div>
@@ -181,11 +183,12 @@ function EmpoweringWomen() {
                 key={index}
                 className="flex items-start gap-3 sm:pl-17 md:pl-0"
               >
-                <div className="pt-1 w-[30px] sm:w-[45px]">
+                <div className="pt-1 w-[35px] sm:w-[40px] xl:w-[50px]">
                   <img
                     src={logo}
                     alt="Flower Icon"
-                    className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] xl:w-[28px] xl:h-[28px]"
+                    // className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] xl:w-[28px] xl:h-[28px]"
+                    className="w-[35px] h-[20px] sm:w-[40px] sm:h-[24px] xl:w-[50px] xl:h-[28px]"
                   />
                 </div>
                 <div>

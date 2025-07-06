@@ -4,17 +4,21 @@ function CurvyDivs({ title, img, para, num }) {
   return (
     <div
       className="group relative flex flex-col items-center justify-between 
-                 bg-[#E0268E] p-8 pt-[44px] pb-10 w-[350px] h-[500px] lg:w-[400px] lg:h-[650px]
-                 text-white overflow-hidden rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl"
+                 bg-[#E0268E] p-8 pt-[44px] pb-10 w-[350px] h-[500px] 
+                 lg:w-[400px] lg:h-[650px] text-white overflow-hidden 
+                 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl"
     >
-      <div className="absolute inset-0 bg-[#FBA6DE] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top z-0" />
+      {/* Background layer - always visible on mobile, hover-activated on desktop */}
+      <div className="absolute inset-0 bg-[#FBA6DE] scale-y-100 lg:scale-y-0 lg:group-hover:scale-y-100 transition-transform duration-500 origin-top z-0" />
 
+      {/* Title */}
       <div className="relative z-10 text-center mb-4">
-        <p className="font-dm-serif text-[#f4f4f5] group-hover:text-[#000000] text-3xl font-bold transition-colors duration-300">
+        <p className="font-dm-serif text-[#000000] lg:text-[#f4f4f5] lg:group-hover:text-[#000000] text-3xl font-bold transition-colors duration-300">
           {title}
         </p>
       </div>
 
+      {/* Image */}
       <div className="relative z-10 w-[200px] h-[300px] lg:w-[300px] lg:h-[450px] mb-4">
         <img
           src={img}
@@ -23,8 +27,9 @@ function CurvyDivs({ title, img, para, num }) {
         />
       </div>
 
+      {/* Paragraph */}
       <div className="relative z-10 text-center px-3">
-        <p className=" text-[#f4f4f5] group-hover:text-[#000000] text-[16px] font-medium transition-colors duration-300">
+        <p className="font-mona text-[#000000] lg:text-[#f4f4f5] lg:group-hover:text-[#000000] text-[16px] font-medium transition-colors duration-300">
           {para}
         </p>
       </div>
@@ -33,6 +38,42 @@ function CurvyDivs({ title, img, para, num }) {
 }
 
 export default CurvyDivs;
+
+// import React from "react";
+
+// function CurvyDivs({ title, img, para, num }) {
+//   return (
+//     <div
+//       className="group relative flex flex-col items-center justify-between 
+//                  bg-[#E0268E] p-8 pt-[44px] pb-10 w-[350px] h-[500px] lg:w-[400px] lg:h-[650px]
+//                  text-white overflow-hidden rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl"
+//     >
+//       <div className="absolute inset-0 bg-[#FBA6DE] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top z-0" />
+
+//       <div className="relative z-10 text-center mb-4">
+//         <p className="font-dm-serif text-[#f4f4f5] group-hover:text-[#000000] text-3xl font-bold transition-colors duration-300">
+//           {title}
+//         </p>
+//       </div>
+
+//       <div className="relative z-10 w-[200px] h-[300px] lg:w-[300px] lg:h-[450px] mb-4">
+//         <img
+//           src={img}
+//           alt="img"
+//           className="w-full h-full object-cover rounded-xl"
+//         />
+//       </div>
+
+//       <div className="relative z-10 text-center px-3">
+//         <p className="font-mona text-[#f4f4f5] group-hover:text-[#000000] text-[16px] font-medium transition-colors duration-300">
+//           {para}
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default CurvyDivs;
 
 // import React from "react";
 

@@ -5,9 +5,9 @@ import flower2 from "../assets/images/f2.png";
 
 function SmartCare() {
   return (
-    <div className="font-dm-serif w-full relative bg-[#FBA6DE] h-[312px] overflow-hidden flex items-center justify-center">
+    <div className="font-dm-serif w-full relative bg-[#e0268e] h-[312px] overflow-hidden flex items-center justify-center">
      
-      <p className="text-[32px] leading-[50px] text-center tracking-[0.18em] w-full sm:w-[80%] lg:w-[72%] lg:text-[42px]">
+      <p className="text-[32px] leading-[50px] text-[#f4f4f5] text-center tracking-[0.18em] w-full sm:w-[80%] lg:w-[72%] lg:text-[42px]">
         Smart Care for Every Age, Every Body
       </p>
 

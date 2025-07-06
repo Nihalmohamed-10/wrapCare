@@ -55,7 +55,7 @@ export default function FaqQuestion() {
   };
 
   return (
-    <div className="p-4 space-y-6">
+    <div className=" p-4 space-y-6">
       {faqs.map((faq, index) => (
         <Accordion
           key={index}
@@ -72,11 +72,11 @@ export default function FaqQuestion() {
           <AccordionSummary
             expandIcon={
               expanded === index ? (
-                <span className="text-pink-500 text-[30px]">
+                <span className="text-[#f4f4f5] text-[30px]">
                   <IoMdClose />
                 </span>
               ) : (
-                <span style={{ fontSize: 20 }}>
+                <span className="text-[#f4f4f5]" style={{ fontSize: 20 }}>
                   <FaPlus />
                 </span>
               )
@@ -96,8 +96,8 @@ export default function FaqQuestion() {
                   xs: "18px",
                   xl: "22px",
                 },
-                color: expanded === index ? "#E0268E" : "black",
-                width: { xs: "219px", sm:"470px", lg: "470px" },
+                color: expanded === index ? "#f4f4f5" : "#f4f4f5",
+                width: { xs: "219px", sm:"470px", lg: "490px"  },
               }}
             >
               {faq.question}
@@ -108,6 +108,7 @@ export default function FaqQuestion() {
               sx={{
                 paddingX: 0,
                 backgroundColor: "transparent",
+                color:"#f4f4f5"
               }}
             >
               {faq.answer}

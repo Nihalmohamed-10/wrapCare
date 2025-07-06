@@ -7,7 +7,7 @@ function QuestionSection() {
   return (
     <div
     id="fac-section"
-    className='w-full bg-[#FDE6F6] px-4 pt-35 py-10 md:pt-[100px] md:pb-[100px] 
+    className='w-full bg-[#e0268e] px-4 pt-35 py-10 md:pt-[100px] md:pb-[100px] 
       flex flex-col items-center md:items-start justify-between gap-8 lg:pt-[35px] lg:flex-row lg:items-center lg:justify-center lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px] '>
       
       <motion.div

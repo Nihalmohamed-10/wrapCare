@@ -4,3 +4,32 @@
 .font-dm-serif{
   font-family: 'DM Serif Text', sans-serif;
 }
+
+@import "tailwindcss";
+
+/* Add Mona Sans font-face */
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/MonaSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/MonaSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Existing DM Serif */
+.font-dm-serif {
+  font-family: 'DM Serif Text', serif;
+}
+
+/* ✅ New Mona Sans utility class */
+.font-mona {
+  font-family: 'Mona Sans', sans-serif;
+}

@@ -37,7 +37,7 @@ const SubscribeSection = () => {
           />
           <button
             type="submit"
-            className="w-full mt-4 md:mt-0 md:w-auto bg-pink-600 text-white font-semibold text-base px-6 py-3 rounded-full hover:bg-pink-700 transition-colors md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:rounded-l-none xl:px-5 xl:py-5"
+            className="font-mona w-full mt-4 md:mt-0 md:w-auto bg-[#2e3532] text-[#f4f4f5] font-semibold text-base px-6 py-3 rounded-full hover:bg-pink-700 transition-colors md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:rounded-l-none xl:px-5 xl:py-5"
           >
             SUBSCRIBE
           </button>
@@ -48,7 +48,7 @@ const SubscribeSection = () => {
       {isModalOpen && (
         <div className="fixed inset-0 bg-pink-600 bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-xl shadow-lg text-center max-w-sm w-full">
-            <h2 className="text-xl font-semibold text-black mb-4">
+            <h2 className="font-mona text-xl font-semibold text-black mb-4">
               Registered Successfully!
             </h2>
             <p className="text-gray-700">Thank you for subscribing to Wrapcare!</p>
