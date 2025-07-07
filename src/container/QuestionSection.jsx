@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import image1 from "../assets/images/wrapCard2.jpg";
 import image2 from "../assets/images/wrapProduct5.jpg";
@@ -9,6 +9,14 @@ import FaqQuestion from '../components/FaqQuestion';
 function QuestionSection() {
   const images = [image1, image2, image3, image4];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const handleImageChange = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -24,9 +32,8 @@ function QuestionSection() {
     >
       <div
         className='w-full px-10 md:w-full lg:w-full cursor-pointer'
-        onMouseEnter={handleImageChange}
-        onClick={handleImageChange}
-        onTouchStart={handleImageChange}
+        onMouseEnter={!isMobile ? handleImageChange : undefined}
+        onClick={isMobile ? handleImageChange : undefined}
       >
         <motion.img
           src={images[currentIndex]}
@@ -58,6 +65,7 @@ function QuestionSection() {
 }
 
 export default QuestionSection;
+
 
 
 
