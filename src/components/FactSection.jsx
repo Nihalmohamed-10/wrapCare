@@ -4,14 +4,18 @@ function FactsSection({ description, isDark }) {
   return (
     <section
       className={`${
-        isDark ? "bg-[#E0268E] pt-10 text-white" : "bg-[#f4f4f5] pt-10 text-[#3F3C3C]"
+        isDark ? "bg-[#E0268E] pt-10 pb-4 text-white" : "bg-[#f4f4f5] pt-10 pb-4 text-[#3F3C3C]"
       } w-full`}
     >
-      <div className="w-full mx-auto flex flex-col lg:flex-row items-start md:items-center justify-between lg:gap-8 lg:pt-[25px] lg:pb-[25px] lg:pr-[21px]">
+      <div
+        className={`w-full mx-auto flex flex-col lg:flex-row items-start md:items-center justify-between lg:gap-8 lg:pt-[25px] ${
+          isDark ? "lg:pb-0" : "lg:pb-[25px]"
+        } lg:pr-[21px]`}
+      >
         <div
-          className={`w-full relative mb-6 lg:border-b lg:w-[50%] ${
-            isDark ? "border-white border-none" : "border-[#E0268E]"
-          }`}
+          className={`w-full relative ${
+            isDark ? "mb-2 border-none" : "mb-6 lg:border-b border-[#E0268E]"
+          } lg:w-[50%]`}
         >
           <h2
             className={`font-dm-serif mx-auto text-[32px] ${
@@ -25,18 +29,53 @@ function FactsSection({ description, isDark }) {
         <div className="font-mona w-full pl-[30px] pr-[30px] text-center sm:w-[90%] sm:mx-auto md:w-[500px] md:text-left lg:text-[18px] lg:leading-[40px]">
           <p>{description}</p>
         </div>
-
-        <div
-          className={`w-full h-[2px] ${
-            isDark ? "bg-white" : "bg-[#E0268E]"
-          } mt-20 md:mt-6 lg:hidden`}
-        ></div>
       </div>
     </section>
   );
 }
 
 export default FactsSection;
+
+
+// import React from "react";
+
+// function FactsSection({ description, isDark }) {
+//   return (
+//     <section
+//       className={`${
+//         isDark ? "bg-[#E0268E] pt-10 text-white" : "bg-[#f4f4f5] pt-10 text-[#3F3C3C]"
+//       } w-full`}
+//     >
+//       <div className="w-full mx-auto flex flex-col lg:flex-row items-start md:items-center justify-between lg:gap-8 lg:pt-[25px] lg:pb-[25px] lg:pr-[21px]">
+//         <div
+//           className={`w-full relative mb-6 lg:border-b lg:w-[50%] ${
+//             isDark ? "border-white border-none" : "border-[#E0268E]"
+//           }`}
+//         >
+//           <h2
+//             className={`font-dm-serif mx-auto text-[32px] ${
+//               isDark ? "text-white" : "text-[#E0268E33]"
+//             } text-center sm:text-[36px] font-semibold lg:text-end`}
+//           >
+//             F A C T S
+//           </h2>
+//         </div>
+
+//         <div className="font-mona w-full pl-[30px] pr-[30px] text-center sm:w-[90%] sm:mx-auto md:w-[500px] md:text-left lg:text-[18px] lg:leading-[40px]">
+//           <p>{description}</p>
+//         </div>
+
+//         <div
+//           className={`w-full h-[2px] ${
+//             isDark ? "bg-white" : "bg-[#E0268E]"
+//           } mt-20 md:mt-6 lg:hidden`}
+//         ></div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default FactsSection;
 
 // import React from 'react';
 
