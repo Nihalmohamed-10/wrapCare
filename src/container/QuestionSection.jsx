@@ -1,36 +1,101 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import calender from "../assets/images/wrapCard2.jpg";
+import image1 from "../assets/images/wrapCard2.jpg";
+import image2 from "../assets/images/wrapProduct5.jpg";
+import image3 from "../assets/images/wrapProduct6.jpg";
+import image4 from "../assets/images/wrapProduct7.jpg";
 import FaqQuestion from '../components/FaqQuestion';
 
 function QuestionSection() {
+  const images = [image1, image2, image3, image4];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleImageChange = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
     <div
       id="fac-section"
       className='w-full bg-[#e0268e] px-4 pt-4 pb-10 md:pt-[50px] md:pb-[70px] 
-        flex flex-col items-center md:items-start justify-between gap-8 lg:pt-[35px] lg:flex-row lg:items-center lg:justify-center lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px]'>
-      
-      <motion.div
-        className='w-full px-10 md:w-full lg:w-full'
-        initial={{ scale: 0.1, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true, amount: 0.4 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        flex flex-col items-center md:items-start justify-between gap-8 
+        lg:pt-[35px] lg:flex-row lg:items-center lg:justify-center 
+        lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px]'
+    >
+      <div
+        className='w-full px-10 md:w-full lg:w-full cursor-pointer'
+        onMouseEnter={handleImageChange}
+        onClick={handleImageChange}
+        onTouchStart={handleImageChange}
       >
-        <img src={calender} alt="img" className="w-full h-auto rounded-2xl" />
-      </motion.div>
+        <motion.img
+          src={images[currentIndex]}
+          alt="img"
+          className="w-full h-auto rounded-2xl transition-all duration-500 ease-in-out"
+          whileHover={{
+            scale: 1.05,
+            rotate: 1,
+            boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.25)"
+          }}
+          whileTap={{
+            scale: 0.95,
+            rotate: -1,
+            boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)"
+          }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ type: "spring", stiffness: 120 }}
+        />
+      </div>
 
-      <div className='flex flex-col xl:gap-5 w-full md:w-[full] space-y-4'>
+      <div className='flex flex-col xl:gap-5 w-full md:w-full space-y-4'>
         <FaqQuestion />
-        {/* <FaqQuestion />
-        <FaqQuestion />
-        <FaqQuestion /> */}
+        {/* <FaqQuestion /> */}
       </div>
     </div>
   );
 }
 
 export default QuestionSection;
+
+
+
+
+
+// import React from 'react';
+// import { motion } from 'framer-motion';
+// import calender from "../assets/images/wrapCard2.jpg";
+// import FaqQuestion from '../components/FaqQuestion';
+
+// function QuestionSection() {
+//   return (
+//     <div
+//       id="fac-section"
+//       className='w-full bg-[#e0268e] px-4 pt-4 pb-10 md:pt-[50px] md:pb-[70px] 
+//         flex flex-col items-center md:items-start justify-between gap-8 lg:pt-[35px] lg:flex-row lg:items-center lg:justify-center lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px]'>
+      
+//       <motion.div
+//         className='w-full px-10 md:w-full lg:w-full'
+//         initial={{ scale: 0.1, opacity: 0 }}
+//         whileInView={{ scale: 1, opacity: 1 }}
+//         viewport={{ once: true, amount: 0.4 }}
+//         transition={{ duration: 0.8, ease: "easeOut" }}
+//       >
+//         <img src={calender} alt="img" className="w-full h-auto rounded-2xl" />
+//       </motion.div>
+
+//       <div className='flex flex-col xl:gap-5 w-full md:w-[full] space-y-4'>
+//         <FaqQuestion />
+//         {/* <FaqQuestion />
+//         <FaqQuestion />
+//         <FaqQuestion /> */}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default QuestionSection;
 
 // import React from 'react';
 // import { motion } from 'framer-motion';
