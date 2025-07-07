@@ -11,6 +11,15 @@ function QuestionSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  // ✅ Preload images on mount
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [images]);
+
+  // ✅ Detect screen width
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
@@ -30,10 +39,14 @@ function QuestionSection() {
         lg:pt-[35px] lg:flex-row lg:items-center lg:justify-center 
         lg:pr-10 lg:pl-10 xl:pl-[120px] xl:pr-[120px]'
     >
-      <div
+      <motion.div
         className='w-full px-10 md:w-full lg:w-full cursor-pointer'
         onMouseEnter={!isMobile ? handleImageChange : undefined}
         onClick={isMobile ? handleImageChange : undefined}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ type: "spring", stiffness: 120 }}
       >
         <motion.img
           src={images[currentIndex]}
@@ -49,12 +62,8 @@ function QuestionSection() {
             rotate: -1,
             boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)"
           }}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ type: "spring", stiffness: 120 }}
         />
-      </div>
+      </motion.div>
 
       <div className='flex flex-col xl:gap-5 w-full md:w-full space-y-4'>
         <FaqQuestion />
@@ -65,6 +74,7 @@ function QuestionSection() {
 }
 
 export default QuestionSection;
+
 
 
 
