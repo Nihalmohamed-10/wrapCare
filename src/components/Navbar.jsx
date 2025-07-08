@@ -61,9 +61,14 @@ const Navbar = () => {
   };
 
   return (
+    // <nav
+    //   className={`font-mona w-full bg-[#e0268e] px-6 lg:px-[60px] xl:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
+    //     isSticky ? "fixed top-0 left-0 shadow-md" : "relative"
+    //   }`}
+    // >
     <nav
-      className={`font-mona w-full bg-[#e0268e] px-6 lg:px-[60px] xl:px-[120px] py-4 flex justify-between items-center z-50 transition-all duration-300 ${
-        isSticky ? "fixed top-0 left-0 shadow-md" : "relative"
+      className={`font-mona w-full fixed top-0 left-0 z-50 px-6 lg:px-[60px] xl:px-[120px] py-4 flex justify-between items-center transition-all duration-300 ${
+        isSticky ? "bg-[#e0268e] shadow-md" : "bg-transparent"
       }`}
     >
       <div onClick={scrollToHomeSection} className="cursor-pointer">
@@ -72,11 +77,36 @@ const Navbar = () => {
 
       <div className="hidden lg:flex gap-10 items-center">
         <ul className="flex space-x-10 text-white font-medium text-[16px]">
-          <li className="cursor-pointer hover:underline" onClick={scrollToHomeSection}>Home</li>
-          <li className="cursor-pointer hover:underline" onClick={scrollToCuratedEssential}>Features</li>
-          <li className="cursor-pointer hover:underline" onClick={scrollToProductSection}>Products</li>
-          <li className="cursor-pointer hover:underline" onClick={scrollToFacSection}>F&Q</li>
-          <li className="cursor-pointer hover:underline" onClick={scrollToFooterSection}>Contact</li>
+          <li
+            className="cursor-pointer hover:underline"
+            onClick={scrollToHomeSection}
+          >
+            Home
+          </li>
+          <li
+            className="cursor-pointer hover:underline"
+            onClick={scrollToCuratedEssential}
+          >
+            Features
+          </li>
+          <li
+            className="cursor-pointer hover:underline"
+            onClick={scrollToProductSection}
+          >
+            Products
+          </li>
+          <li
+            className="cursor-pointer hover:underline"
+            onClick={scrollToFacSection}
+          >
+            F&Q
+          </li>
+          <li
+            className="cursor-pointer hover:underline"
+            onClick={scrollToFooterSection}
+          >
+            Contact
+          </li>
         </ul>
 
         <button
@@ -203,8 +233,6 @@ export default Navbar;
 //   FaTimes,
 // } from "react-icons/fa";
 
-
-
 // import newLogo from "../assets/images/newLogo.png";
 // import { useState, useEffect } from "react";
 
@@ -266,12 +294,11 @@ export default Navbar;
 //         isSticky ? "fixed top-0 left-0 shadow-md" : "relative"
 //       }`}
 //     >
-    
+
 //       <div onClick={scrollToHomeSection} className="cursor-pointer">
 //         <img src={newLogo} alt="logoimg" className="h-15 w-auto" />
 //       </div>
 
-     
 //       <div className="hidden lg:flex gap-10 items-center">
 //         <ul className="flex space-x-10 text-white font-medium text-[16px]">
 //           <li className="cursor-pointer hover:underline" onClick={scrollToHomeSection}>Home</li>
@@ -281,7 +308,6 @@ export default Navbar;
 //           <li className="cursor-pointer hover:underline" onClick={scrollToFooterSection}>Contact</li>
 //         </ul>
 
-      
 //         <button
 //           onClick={scrollToProductSection}
 //           className="bg-white text-[#E0268E] font-semibold px-6 py-2 rounded-full hover:bg-pink-100 transition duration-300"
@@ -290,7 +316,6 @@ export default Navbar;
 //         </button>
 //       </div>
 
-      
 //       <div
 //         className="lg:hidden text-white text-3xl cursor-pointer z-50"
 //         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -298,7 +323,6 @@ export default Navbar;
 //         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
 //       </div>
 
- 
 //       {isMobileMenuOpen && (
 //         <div
 //           className="fixed inset-0 bg-[#e0268e] bg-opacity-95 backdrop-blur-sm flex flex-col items-center justify-center z-40"
@@ -357,7 +381,6 @@ export default Navbar;
 //             </li>
 //           </ul>
 
-      
 //           <button
 //             onClick={(e) => {
 //               e.stopPropagation();
@@ -385,7 +408,6 @@ export default Navbar;
 // } from "react-icons/fa";
 // import newLogo from "../assets/images/newLogo.png";
 // import { useState, useEffect } from "react";
-
 
 // const Navbar = () => {
 //   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -552,8 +574,6 @@ export default Navbar;
 
 // export default Navbar;
 
-
-
 // import {
 //   FaUser,
 //   FaShoppingBag,
@@ -601,7 +621,7 @@ export default Navbar;
 //           <li className="cursor-pointer hover:underline">F&Q</li>
 //           <li className="cursor-pointer hover:underline">Contact</li>
 //         </ul>
-  
+
 //         <div className="hidden lg:flex space-x-6 text-white text-lg">
 //           <FaUser className="cursor-pointer" />
 //           <FaShoppingBag className="cursor-pointer" />
